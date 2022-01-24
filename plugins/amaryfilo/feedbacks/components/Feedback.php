@@ -36,10 +36,29 @@ class Feedback extends ComponentBase
         $rules = 'required';
         if(post('type') === 'email') $rules = 'required|email';
         elseif (post('type') === 'whatsapp') $rules = 'required|regex:/^[+][0-9]{1,4}[-]{0,1}[0-9]{10,15}$/';
+        elseif (post('type') === 'telegram') {
+            $ruleLink = '/^(https:\/\/(?:t\.me\/))[a-zA-Z0-9]{1,}$/';
+            $ruleTag = '/^[@]{1}[0-9,a-z,A-Z]{1,}$/';
+            $rulePhone = '/^[+][0-9]{1,4}[-]{0,1}[0-9]{10,15}$/';
+
+            $match = [
+                'link' =>  preg_match($ruleLink, trim(post('contact'))),
+                'tag'   =>  preg_match($ruleTag, trim(post('contact'))),
+                'phone'  =>  preg_match($rulePhone, trim(post('contact'))),
+            ];
+
+            if ($match['link']) $rules = "regex:".$ruleLink;
+            elseif ($match['tag']) $rules = "regex:".$ruleTag;
+            elseif ($match['phone']) $rules = "regex:".$rulePhone;
+            else $rules = "regex:/^(rocknblockerror)$/";
+        }
 
         $validator = Validator::make(Request::all(), ['contact'=> $rules], $messages);
 
-        if($validator->fails()) throw new ValidationException($validator);
+        if($validator->fails()) {
+            if (post('type') === 'telegram') throw new ValidationException(['contact' => 'Accepted only: https://t.me/account, @account or phone ex.: +x-xxxxxxxxxx']);
+            else throw new ValidationException($validator);
+        } 
 
         $data = [
             'name' => post('name'),
@@ -66,8 +85,7 @@ class Feedback extends ComponentBase
         
         if(post('type') === 'email') Mail::sendTo(trim(post('contact')), 'amaryfilo.feedbacks::mail.request', ['name' => post('name')]);
         
-        # $this->toPipeDrive($data);
-        
+        $this->toPipeDrive($data);
     }
 
     public function onFormDone()
