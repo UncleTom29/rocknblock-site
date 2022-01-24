@@ -23,8 +23,13 @@ fields:
         type: text
         span: right
         readOnly: true
+    idea:
+        label: Type
+        type: text
+        span: left
+        readOnly: true
     created_at:
         label: Date
         type: datepicker
-        span: full
+        span: right
         readOnly: true

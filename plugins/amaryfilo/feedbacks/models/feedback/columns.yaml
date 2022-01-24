@@ -15,9 +15,14 @@ columns:
     type:
         label: Type
         searchable: true
+    idea:
+        label: Idea
+        searchable: true
     from_url:
         label: URL
         searchable: true
     created_at:
         label: Date
+        type: datetime
+        useTimezone: true
         searchable: true
