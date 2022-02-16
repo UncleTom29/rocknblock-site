@@ -82,14 +82,21 @@
 
         .button {
           margin-top: 30px;
+          max-width: 270px;
+          width: 100%;
         }
       }
     }
 
     .expertise {
+      .button {
+        max-width: 280px;
+        width: 100%;
+      }
+
       .content {
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(135px,1fr));
         grid-gap: 15px;
 
         margin-top: 100px;
@@ -101,6 +108,10 @@
         align-items: center;
         text-align: center;
         padding: 20px;
+
+        @include b(769) {
+          padding: 10px;
+        }
 
         .img {
           margin-bottom: 20px;
@@ -129,12 +140,19 @@
 
       &-img {
         width: 100%;
-        overflow-x: scroll;
-        overflow-y: hidden;
+        
+        @include b(769) {
+          overflow-x: scroll;
+          overflow-y: hidden;
+        }
       }
 
       .img {
-        max-width: initial;
+        max-width: 100%;
+
+        @include b(769) {
+          max-width: initial;
+        }
       }
     }
 
@@ -144,6 +162,10 @@
       background-position: top;      
       background-size: 100%;
 
+      @include b(1024) {
+        background-size: auto;
+      }
+
       .content {
         display: grid;
         grid-template-columns: 1fr;
@@ -152,24 +174,42 @@
 
       &-item {
         display: grid;
-        grid-template-columns: minmax(300px,550px) minmax(300px,1fr);
+        grid-template-columns: minmax(300px, 540px) minmax(300px, 1fr);
         grid-gap: 50px;
         justify-content: space-between;
+        align-items: center;
 
         @include b(1024) {
           grid-gap: 20px;
-          // grid-template-columns: minmax(300px,550px) 1fr;
+        }
+
+        @include b(650) {
+          grid-template-columns: 1fr;
         }
         
         &.reverce {
-          grid-template-columns: 1fr minmax(400px,550px);
+          grid-template-columns: minmax(300px, 1fr) minmax(300px, 540px);
+
+          @include b(650) {
+            grid-template-columns: 1fr;
+          }
 
           .advanced-item-content {
             text-align: right;
             justify-content: flex-end;
 
+            @include b(650) {
+              text-align: left;
+              justify-content: flex-start;
+              order: 2;
+            }
+
             &-wrap {
               align-items: flex-end;
+
+              @include b(650) {
+                align-items: flex-start;
+              }
             }
 
             .btn {
@@ -178,19 +218,17 @@
           }
         }
 
-        &-img {
-          position: relative;
-          max-width: 100%;
+        .img {
+          filter: grayscale(100%);
           border-radius: 25px;
           overflow: hidden;
-          min-height: 300px;
+          height: max-content;
+          display: flex;
 
-          .img {
-            filter: grayscale(100%);
-            position: absolute;
+          @include b(650) {
             width: 100%;
-            height: 100%;
-            display: flex;
+            max-width: max-content;
+            margin: 0 auto 20px auto;
           }
         }
 
@@ -226,17 +264,59 @@
           }
 
           .btn {
-            opacity: 0.5;
+            color: #868686;
             font-size: 14px;
             letter-spacing: 2px;
             text-transform: uppercase;
             justify-content: flex-start;
             width: max-content;
 
+            img {
+              width: 15px;
+              height: 15px;
+              margin-left: 10px;
+            }
+
             &:hover {
               color: #DC2C2C;
-              opacity: 1;
             }
+          }
+        }
+      }
+    }
+
+    .numbers {
+      .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(255px, 1fr));
+        grid-gap: 30px;
+        justify-content: space-between;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+
+        &-img {
+          background: linear-gradient(198.63deg, #AB231B -0.58%, #310909 83.87%);
+          border-radius: 12px;
+          padding: 10px;
+          height: 70px;
+          width: 70px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+        }
+
+        &-content {
+          .title {
+            font-size: 18px;
+          }
+
+          .text {
+            font-size: 16px;
+            opacity: 0.5;
           }
         }
       }
