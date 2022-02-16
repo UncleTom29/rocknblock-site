@@ -2,10 +2,18 @@
   &-safemoon {
     overflow: hidden;
 
+    .container {
+      max-width: 1130px;
+    }
+
     section {
-      margin: 150px 0;
+      margin: 100px 0;
       display: inline-block;
       width: 100%;
+
+      @include b(769) {
+        margin: 50px 0;
+      }
     }
 
     .block-head {
@@ -24,6 +32,14 @@
         font-weight: bold;
         text-transform: uppercase;
         font-family: TTNorms, sans-serif;
+
+        @include b(1024) {
+          font-size: 40px;
+        }
+
+        @include b(1024) {
+          font-size: 35px;
+        }
       }
       
       .text {
@@ -49,22 +65,41 @@
         margin: 0;
         text-align: left;
 
+        @include b(769) {
+          max-width: 100%;
+          align-items: center;
+          text-align: center;
+        }
+
         .title {
           font-size: 60px;
           line-height: 1;
           text-transform: uppercase;
+
+          @include b(769) {
+            font-size: 35px;
+          }
         }
 
         .text {
           font-size: 21px;
           font-weight: 300;
           margin: 0;
+
+          @include b(769) {
+            margin: 0 auto;
+          }
         }
 
         .button {
           max-width: 180px;
           font-size: 14px;
           margin-top: 25px;
+          width: 100%;
+
+          @include b(769) {
+            margin: 20px auto;
+          }
         }
       }
     }
@@ -76,6 +111,11 @@
         grid-gap: 20px;
         max-width: 860px;
         margin: 0 auto;
+
+        @include b(769) {
+          grid-template-columns: 1fr;
+          grid-gap: 40px;
+        }
       }
 
       &-item {
@@ -85,14 +125,47 @@
         background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
         padding: 50px;
 
-        .img {
-          height: 124px;
+        @include b(550) {
+          padding: 20px;
         }
 
+        &-top {
+          margin-bottom: 10px;
+
+          @include b(769) {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .img {
+          height: 124px;
+          margin-right: 15px;
+
+          @include b(769) {
+            width: 90px;
+            height: 90px;
+          }
+
+          @include b(550) {
+            height: 70px;
+            width: 70px;
+          }
+        }
+        
         .title {
           font-size: 30px;
           text-transform: uppercase;
-          margin-bottom: 10px;
+          margin-top: 30px;
+
+          @include b(769) {
+            margin-top: 0;
+            font-size: 20px;
+          }
+
+          @include b(550) {
+            font-size: 16px;
+          }
         }
 
         .text {
@@ -106,6 +179,23 @@
     }
 
     .how-it-works {
+      margin-top: 0;
+
+      .h-mobile {
+        @include b(650) {
+          display: none;
+        }
+      }
+
+      .h-desktop {
+        display: none;
+        margin: 0 auto;
+
+        @include b(650) {
+          display: block;
+        }
+      }
+
       .block-head {
         background-image: url('../img/safemoon/flame.png');
         background-repeat: no-repeat;
@@ -118,6 +208,182 @@
         max-width: 340px;
         font-size: 14px;
         margin: 50px auto 0 auto;
+      }
+    }
+
+    .benefits {
+      margin: -200px 0 0 0;
+      // padding: 250px 0 150px 0;
+      // background-image: url('../img/safemoon/bg-benefits.png');
+      // background-repeat: no-repeat;
+      // background-size: auto;
+      // background-position: center 50%;
+      // background-size: 80%;
+      // background-position: center 50%;
+
+
+      // @include b(769) {
+      //   background-size: auto;
+      //   background-position: center 70%;
+      // }
+      
+      // @include b(400) {
+      //   background-position: center 160%;
+      // }
+
+      .container {
+        background-image: url('../img/safemoon/bg-benefits.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center 60%;
+        padding: 250px 15px 20px 15px;
+
+        @include b(650) {
+          background-size: auto;
+          background-position: center 40%;
+          padding-bottom: 100px;
+        }
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+
+        @include b(1024) {
+          grid-gap: 20px;
+        }
+
+        @include b(769) {
+          grid-gap: 10px;
+        }
+      }
+
+      &-item {
+        background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
+        border-radius: 24px;
+        padding: 50px 25px;
+
+        @include b(769) {
+          padding: 25px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .img {
+          min-height: 92px;
+
+          @include b(769) {
+            min-height: 60px;
+            width: 60px;
+          }
+        }
+        
+        .text {
+          font-size: 18px;
+          line-height: 1.4;
+          margin-top: 20px;
+          font-weight: 300;
+          
+          @include b(769) {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    .below {
+      @include b(650) {
+        margin-top: 10px;
+      }
+
+      .block-head {
+        .title {
+          font-size: 24px;
+          padding: 0 50px;
+
+          @include b(769) {
+            padding: 0;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 25px;
+        
+        @include b(1024) {
+          grid-gap: 15px;
+        }
+        
+        @include b(550) {
+          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+          grid-gap: 10px;
+        }
+      }
+
+      &-item {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #2C2C33;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 300px;
+        padding: 30px 30px 20px 30px;
+
+        @include b(769) {
+          min-height: 200px;
+        }
+
+        .img {
+          min-height: 110px;
+          margin-bottom: 30px;
+
+          @include b(769) {
+            min-height: 60px;
+            width: 60px;
+            margin-bottom: 20px;
+          }
+        }
+
+        .title {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+          font-size: 20px;
+          text-transform: uppercase;
+          height: 100%;
+
+          &::after {
+            content: attr(data-text);
+            font-size: 15px;
+            opacity: 0.5;
+          }
+
+          @include b(769) {
+            font-size: 16px;
+
+            &::after {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+
+    .how-to-setup {
+      .content {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 21px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.5;
       }
     }
   }
