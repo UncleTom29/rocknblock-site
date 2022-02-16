@@ -22,12 +22,16 @@ mixin what-are
         p.text A deflationary token model is where a particular percentage of tokens are removed from the market each time a token transfer takes place. The process of removing these tokens from the market is termed, Burns. The burning of these tokens can be carried out by two different mechanisms as follows:
       .content
         .what-are-item
-          +webpImg('lazy',`../../img/safemoon/what-1`,'png','Buy back','img')
-          h3.title Buy back
+          .what-are-item-top
+            +webpImg('lazy',`../../img/safemoon/what-2`,'png','Buy back','img')
+            h3.title Buy back
           p.text A mechanism happens when a project removes a particular amount of its tokens from the market by sending them to a dead address, thus eliminates those tokens permanently. After that, the same project uses its very own funds to repurchase an amount of those burnt tokens and hold them in their wallets. 
         .what-are-item
-          +webpImg('lazy',`../../img/safemoon/what-2`,'png','Burn on Transaction','img')
-          h3.title Burn on Transaction
+          .what-are-item-top
+            +webpImg('lazy',`../../img/safemoon/what-1`,'png','Burn on Transaction','img')
+            h3.title Burn
+              br
+              | on Transaction
           p.text A method where a particular amount of tokens from the sender account is decreased and thus led to a decreased supply of tokens in the blockchain. This Burn transaction can be sent by any user who owns a token. 
           
 
@@ -37,7 +41,8 @@ mixin how-it-works
       .block-head
         h2.title How deflationary tokens work
       .content
-        img(loading='lazy' src='../../img/safemoon/chain-transactions.svg' alt='chain transactions')
+        img(loading='lazy' src='../../img/safemoon/chain-transactions.svg' alt='chain transactions').h-mobile
+        img(loading='lazy' src='../../img/safemoon/chain-transactions-mob.svg' alt='chain transactions').h-desktop
         a.button(href="#contact-us") Learn more on our Blog
           img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
 
@@ -51,7 +56,7 @@ mixin benefits
           +webpImg('lazy',`../../img/safemoon/benefits-coin`,'png','benefit coin','img')
           p.text It helps in maintaining a stable price of the token value once listed for trading.
         .benefits-item
-          +webpImg('lazy',`../../img/safemoon/benefits-chairt`,'png','benefit chairt','img')
+          +webpImg('lazy',`../../img/safemoon/benefits-chart`,'png','benefit chart','img')
           p.text It increases liquidity as the demand for the assets on the market is higher.
         .benefits-item
           +webpImg('lazy',`../../img/safemoon/benefits-investor`,'png','benefit investor','img')
