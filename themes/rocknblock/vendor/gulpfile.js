@@ -5,7 +5,7 @@ const pug2html = require("./gulp/tasks/pug2html");
 const styles = require("./gulp/tasks/styles");
 const script = require("./gulp/tasks/script");
 const fonts = require("./gulp/tasks/fonts");
-const imageMinify = require("./gulp/tasks/imageMinify");
+// const imageMinify = require("./gulp/tasks/imageMinify");
 const clean = require("./gulp/tasks/clean");
 const lighthouse = require("./gulp/tasks/lighthouse");
 const svgSprite = require("./gulp/tasks/svgSprite");
@@ -21,7 +21,7 @@ const dev = gulp.parallel(
   styles,
   script,
   fonts,
-  imageMinify,
+  // imageMinify,
   imgsWebp,
   svgSprite,
   seo,

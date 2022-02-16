@@ -1,0 +1,20 @@
+extends layouts/index
+
+include sections/blocks
+include sections/safemoon
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-safemoon
+		+hero
+		+what-are
+		+how-it-works
+		+benefits
+		+below
+		+how-to-setup
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer
