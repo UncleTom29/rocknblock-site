@@ -139,6 +139,11 @@
     }
 
     .advanced {
+      background-image: url('../img/launchpad/sky.png');
+      background-repeat: no-repeat;
+      background-position: top;      
+      background-size: 100%;
+
       .content {
         display: grid;
         grid-template-columns: 1fr;
@@ -147,9 +152,14 @@
 
       &-item {
         display: grid;
-        grid-template-columns: minmax(400px,550px) 1fr;
+        grid-template-columns: minmax(300px,550px) minmax(300px,1fr);
         grid-gap: 50px;
         justify-content: space-between;
+
+        @include b(1024) {
+          grid-gap: 20px;
+          // grid-template-columns: minmax(300px,550px) 1fr;
+        }
         
         &.reverce {
           grid-template-columns: 1fr minmax(400px,550px);
