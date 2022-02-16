@@ -1,0 +1,19 @@
+extends layouts/index
+
+include sections/blocks
+include sections/launchpad
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-launchpad
+		+hero
+		+expertise
+		+features
+		+advanced
+		+numbers
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer
