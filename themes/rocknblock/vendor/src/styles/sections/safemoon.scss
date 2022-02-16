@@ -85,6 +85,10 @@
         background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
         padding: 50px;
 
+        .img {
+          height: 124px;
+        }
+
         .title {
           font-size: 30px;
           text-transform: uppercase;
@@ -102,10 +106,18 @@
     }
 
     .how-it-works {
+      .block-head {
+        background-image: url('../img/safemoon/flame.png');
+        background-repeat: no-repeat;
+        background-size: 240px;
+        background-position: center top;
+        padding-top: 140px;
+      }
+
       .button {
-        max-width: 225px;
+        max-width: 340px;
         font-size: 14px;
-        margin: 0 auto;
+        margin: 50px auto 0 auto;
       }
     }
   }
