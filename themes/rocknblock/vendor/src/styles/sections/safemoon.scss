@@ -57,6 +57,43 @@
       display: flex;
       align-items: center;
       min-height: 800px;
+
+      margin-top: 0px;
+
+      background: url('../img/safemoon/bg-safemoon.png');
+      background-repeat: no-repeat;
+      background-position: center 65%;
+
+      @include b(1024) {
+        min-height: 600px;
+        background-position: center 85%;
+      }
+
+      @include b(769) {
+        background: url('../img/safemoon/bg-safemoon-mob.png');
+        background-repeat: no-repeat;
+        background-position: center -20%;
+        min-height: 0;
+      }
+
+      .container {
+        background: url('../img/safemoon/bg-safemoon-coins.png');
+        background-repeat: no-repeat;
+        background-position: 100% center;
+        background-size: contain;
+        padding: 100px 15px;
+
+        @include b(1024) {
+          background-size: 50%;
+        }
+
+        @include b(769) {
+          background-size: 230px;
+          background-position: center 20%;
+          padding-top: 250px;
+          padding-bottom: 0;
+        }
+      }
       
       .block-head {
         max-width: 420px;
