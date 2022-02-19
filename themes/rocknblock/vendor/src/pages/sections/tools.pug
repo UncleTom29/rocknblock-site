@@ -16,13 +16,13 @@ mixin what-are
         h2.title What are the tools for
       .content
         .what-are-item
-          +webpImg('lazy',`../../img/tools/whai-`,'png','Prediction of the market movement','img')
+          +webpImg('lazy',`../../img/tools/prediction`,'png','Prediction of the market movement','img')
           h3.title Prediction of the market movement
         .what-are-item
-          +webpImg('lazy',`../../img/tools/whai-`,'png','Exploration of various pools, pairs, and swaps','img')
+          +webpImg('lazy',`../../img/tools/exploration`,'png','Exploration of various pools, pairs, and swaps','img')
           h3.title Exploration of various pools, pairs, and swaps
         .what-are-item
-          +webpImg('lazy',`../../img/tools/whai-`,'png','Evaluation of real-time data, for successful trading strategies','img')
+          +webpImg('lazy',`../../img/tools/evalution`,'png','Evaluation of real-time data, for successful trading strategies','img')
           h3.title Evaluation of real-time data, for successful trading strategies
 
 mixin interface
@@ -33,7 +33,7 @@ mixin interface
       .content
         .interface-item
           .interface-item-top
-            img(loading='lazy' src='../../img/tools/features.svg' alt='features of launchpad').img
+            +webpImg('lazy',`../../img/tools/tools-uni`,'png','tools uni','img')
             span.title HOT UNI
           .interface-item-content
             .interface-item-row
@@ -46,7 +46,7 @@ mixin interface
                 span.title Name
                 span.price $0.04641953
               img(loading='lazy' src='../../img/tools/link.svg' alt='link tools').img
-            .interface-item-row
+            .interface-item-row.tools-interface-down
               .interface-item-row-info
                 span.title Name
                 span.price $0.04641953
@@ -96,7 +96,7 @@ mixin interface
                 span.title Name
                 span.price $0.04641953
               img(loading='lazy' src='../../img/tools/link.svg' alt='link tools').img
-            .interface-item-row
+            .interface-item-row.tools-interface-down
               .interface-item-row-info
                 span.title Name
                 span.price $0.04641953
@@ -106,9 +106,9 @@ mixin interface
                 span.title Name
                 span.price $0.04641953
               img(loading='lazy' src='../../img/tools/link.svg' alt='link tools').img
-        .interface-item
+        .interface-item.h-mobile
           .interface-item-top
-            img(loading='lazy' src='../../img/tools/features.svg' alt='features of launchpad').img
+            +webpImg('lazy',`../../img/tools/tools-sushi`,'png','tools-sushi','img')
             span.title HOT SUSHI
           .interface-item-content
             .interface-item-row
@@ -131,7 +131,22 @@ mixin interface
                 span.title Name
                 span.price $0.04641953
               img(loading='lazy' src='../../img/tools/link.svg' alt='link tools').img
+            .interface-item-row.tools-interface-down
+              .interface-item-row-info
+                span.title Name
+                span.price $0.04641953
+              img(loading='lazy' src='../../img/tools/link.svg' alt='link tools').img
             .interface-item-row
+              .interface-item-row-info
+                span.title Name
+                span.price $0.04641953
+              img(loading='lazy' src='../../img/tools/link.svg' alt='link tools').img
+            .interface-item-row
+              .interface-item-row-info
+                span.title Name
+                span.price $0.04641953
+              img(loading='lazy' src='../../img/tools/link.svg' alt='link tools').img
+            .interface-item-row.tools-interface-down
               .interface-item-row-info
                 span.title Name
                 span.price $0.04641953
@@ -151,22 +166,7 @@ mixin interface
                 span.title Name
                 span.price $0.04641953
               img(loading='lazy' src='../../img/tools/link.svg' alt='link tools').img
-            .interface-item-row
-              .interface-item-row-info
-                span.title Name
-                span.price $0.04641953
-              img(loading='lazy' src='../../img/tools/link.svg' alt='link tools').img
-            .interface-item-row
-              .interface-item-row-info
-                span.title Name
-                span.price $0.04641953
-              img(loading='lazy' src='../../img/tools/link.svg' alt='link tools').img
-            .interface-item-row
-              .interface-item-row-info
-                span.title Name
-                span.price $0.04641953
-              img(loading='lazy' src='../../img/tools/link.svg' alt='link tools').img
-            .interface-item-row
+            .interface-item-row.tools-interface-down
               .interface-item-row-info
                 span.title Name
                 span.price $0.04641953
@@ -189,27 +189,27 @@ mixin tracking
         h2.title Tools Options for tracking
       .content
         .tracking-item
-          +webpImg('lazy',`../../img/tools/tree`,'png','tools','img')
+          +webpImg('lazy',`../../img/tools/pie-chart`,'png','pie-chart','img')
           h3.title Charts
           p.text Charts — Follow and analyze the best pairs with real-time graphics, transactions, and much more.
         .tracking-item
-          +webpImg('lazy',`../../img/tools/tree`,'png','tools','img')
+          +webpImg('lazy',`../../img/tools/top`,'png','top','img')
           h3.title Top gainers
           p.text Coins with the biggest gains in the last 24 hours
         .tracking-item
-          +webpImg('lazy',`../../img/tools/tree`,'png','tools','img')
+          +webpImg('lazy',`../../img/tools/wallet`,'png','wallet','img')
           h3.title Wallet Info
           p.text Save, track, and research wallets
         .tracking-item
-          +webpImg('lazy',`../../img/tools/tree`,'png','tools','img')
+          +webpImg('lazy',`../../img/tools/notification-bell`,'png','notification-bell','img')
           h3.title Notifications
           p.text Get live notifications on your favorite coins and pairs.
         .tracking-item
-          +webpImg('lazy',`../../img/tools/tree`,'png','tools','img')
+          +webpImg('lazy',`../../img/tools/robot`,'png','robot','img')
           h3.title Bots
           p.text Create your own trading strategies for maximum profitability.
         .tracking-item
-          +webpImg('lazy',`../../img/tools/tree`,'png','tools','img')
+          +webpImg('lazy',`../../img/tools/subscription`,'png','tools','img')
           h3.title Subscriptions
           p.text Stake tokens to enable features.
 
