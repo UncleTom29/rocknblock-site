@@ -60,7 +60,8 @@
 
       margin-top: 0px;
 
-      background: url('../img/safemoon/bg-safemoon.png');
+      // background: url('../img/safemoon/bg-safemoon.png');
+      background: url('../images/site/safemoon/bg-safemoon.png');
       background-repeat: no-repeat;
       background-position: center 65%;
 
@@ -70,14 +71,16 @@
       }
 
       @include b(769) {
-        background: url('../img/safemoon/bg-safemoon-mob.png');
+        // background: url('../img/safemoon/bg-safemoon-mob.png');
+        background: url('../images/site/safemoon/bg-safemoon-mob.png');
         background-repeat: no-repeat;
         background-position: center -20%;
         min-height: 0;
       }
 
       .container {
-        background: url('../img/safemoon/bg-safemoon-coins.png');
+        // background: url('../img/safemoon/bg-safemoon-coins.png');
+        background: url('../images/site/safemoon/bg-safemoon-coins.png');
         background-repeat: no-repeat;
         background-position: 100% center;
         background-size: contain;
@@ -234,7 +237,8 @@
       }
 
       .block-head {
-        background-image: url('../img/safemoon/flame.png');
+        // background-image: url('../img/safemoon/flame.png');
+        background: url('../images/site/safemoon/flame.png');
         background-repeat: no-repeat;
         background-size: 240px;
         background-position: center top;
@@ -252,7 +256,8 @@
       margin: -200px 0 0 0;
 
       .container {
-        background-image: url('../img/safemoon/bg-benefits.png');
+        // background-image: url('../img/safemoon/bg-benefits.png');
+        background: url('../images/site/safemoon/benefits.png');
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center 60%;
