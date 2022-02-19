@@ -58,7 +58,8 @@
     }
 
     .hero {
-      background-image: url('../img/tools/bg-hero.png');
+      // background-image: url('../img/tools/bg-hero.png');
+      background-image: url('../images/site/tools/bg-hero.png');
       background-repeat: no-repeat;
       background-position: right 0;
 
@@ -183,7 +184,8 @@
     }
 
     .interface {
-      background-image: url('../img/tools/bg-tools.png');
+      // background-image: url('../img/tools/bg-tools.png');
+      background-image: url('../images/site/tools/bg-tools.png');
       background-position: left;
       background-size: contain;
       background-repeat: no-repeat;
@@ -274,7 +276,8 @@
           &.tools-interface-down {
             .title {
               &::after {
-                background-image: url('../img/tools/down.svg');
+                // background-image: url('../img/tools/down.svg');
+                background-image: url('../images/site/tools/down.svg');
               }
             }
 
@@ -296,7 +299,8 @@
 
             &::after {
               content: '';
-              background-image: url('../img/tools/up.svg');
+              // background-image: url('../img/tools/up.svg');
+              background-image: url('../images/site/tools/up.svg');
               background-position: center;
               background-size: contain;
               background-repeat: no-repeat;
@@ -379,7 +383,8 @@
     }
 
     .need {
-      background-image: url('../img/tools/bg-need.png');
+      // background-image: url('../img/tools/bg-need.png');
+      background-image: url('../images/site/tools/bg-need.png');
       background-position: right;
       background-size: contain;
       background-repeat: no-repeat;
@@ -406,7 +411,8 @@
 
         &::before {
           content: '';
-          background-image: url('../img/tools/flash.png');
+          // background-image: url('../img/tools/flash.png');
+          background-image: url('../images/site/tools/flash.png');
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;
