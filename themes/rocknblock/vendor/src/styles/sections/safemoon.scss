@@ -324,6 +324,7 @@
           line-height: 1.4;
           margin-top: 20px;
           font-weight: 300;
+          font-family: TTCommons, sans-serif;
           
           @include b(769) {
             margin-top: 10px;
@@ -424,6 +425,10 @@
         font-weight: 300;
         text-align: center;
         line-height: 1.5;
+
+        p {
+          font-family: TTCommons, sans-serif !important;
+        }
       }
     }
   }
