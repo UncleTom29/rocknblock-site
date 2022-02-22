@@ -118,6 +118,54 @@ description = "Section links slider v2"
 				</article>
 			</div>
 			{% endif %}
+			{% if this.page.url != '/launchpad' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/farming/icon-site8.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/farming/icon-site78.png'| theme }}" alt="Launchpad" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/launchpad">Bridge <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/tools' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/farming/icon-site9.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/farming/icon-site9.png'| theme }}" alt="Tools" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/tools">Bridge <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/safemoon' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/farming/icon-site10.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/farming/icon-site10.png'| theme }}" alt="Safemoon" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/safemoon">Bridge <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
 		</div>
 		<div class="navigation"><img class="navIcon nav-prev" src="{{ 'assets/images/site/nft/toLeft.svg'| theme }}" alt="nav left" /><img class="navIcon nav-next" src="{{ 'assets/images/site/nft/toRight.svg'| theme }}" alt="nav right" /></div>
 	</div>
