@@ -155,6 +155,12 @@
     }
 
     .what-are {
+      margin-top: 30px;
+      
+      @include b(769) {
+        margin-top: 50px;
+      }
+
       @include b(550) {
         margin-bottom: 0;
       }
