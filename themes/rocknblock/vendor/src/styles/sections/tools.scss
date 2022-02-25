@@ -58,8 +58,8 @@
     }
 
     .hero {
-      background-image: url('../img/tools/bg-hero.png');
-      // background-image: url('../images/site/tools/bg-hero.png');
+      // background-image: url('../img/tools/bg-hero.png');
+      background-image: url('../images/site/tools/bg-hero.png');
       background-repeat: no-repeat;
       background-position: center 0;
       box-shadow: inset 0px -20px 20px -10px #000000;
@@ -72,7 +72,8 @@
       margin-top: 0px;
 
       @include b(650) {
-        background-image: url('../img/tools/bg-hero-mobile.png');
+        // background-image: url('../img/tools/bg-hero-mobile.png');
+        background-image: url('../images/site/tools/bg-hero-mobile.png');
         background-size: contain;
         min-height: auto;
       }
