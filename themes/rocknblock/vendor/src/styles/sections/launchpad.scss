@@ -91,6 +91,10 @@
     }
 
     .expertise {
+      @include b(769) {
+        margin-top: 0px;
+      }
+
       .button {
         max-width: 280px;
         width: 100%;
