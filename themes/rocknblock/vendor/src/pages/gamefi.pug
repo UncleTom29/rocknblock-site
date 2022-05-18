@@ -1,0 +1,20 @@
+extends layouts/index
+
+include sections/blocks
+include sections/gamefi
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-gamefi
+		+hero
+		+what-is-gamefi
+		+features
+		+team
+		+profits
+		+test
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer
