@@ -4,12 +4,13 @@ mixin hero
   section.hero
     .container
       .block-head
-        h1.title White Lable 
-          span LaunchPAD 
-          | Development Solutions
-        p.text A decentralized launchpad that allows easy listing and running of the exceptional projects. 
-        a.button(href="#contact-us") ORDER LAUNCHPAD
+        h1.title GameFi Development
+        p.text GameFi new round of game development industry that is increasingly attracting gamers 
+        a.button(href="#contact-us") Create your unique game
           img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+        +webpImg('lazy',`../../img/gamefi/hero-bottom`,'png','Gamefi development','img')
+      +webpImg('lazy',`../../img/gamefi/hero-main`,'png','Gamefi development','imgmain')
+
 
 mixin what-is-gamefi
   section.what-is-gamefi
