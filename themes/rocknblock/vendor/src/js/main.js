@@ -117,4 +117,14 @@ $(document).ready(() => {
       prevEl: '.nav-prev',
     },
   });
+
+  const sliderGames = new Swiper('.swiper-games', {
+    slidesPerView: 'auto',
+    loop: true,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.game-nav-next',
+      prevEl: '.game-nav-prev',
+    },
+  });
 });
