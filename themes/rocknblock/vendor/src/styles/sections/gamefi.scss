@@ -429,10 +429,19 @@
         align-items: center;
         justify-content: center;
 
+        @include b(769) {
+          min-height: 350px;
+        }
+
         .title {
           text-transform: uppercase;
           font-size: 60px;
           margin-bottom: 10px;
+          text-align: center;
+
+          @include b(769) {
+            font-size: 40px;
+          }
         }
 
         .button {
