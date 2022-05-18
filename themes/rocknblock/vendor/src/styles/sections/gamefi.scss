@@ -453,5 +453,140 @@
         }
       }
     }
+
+    .games {
+      .container {
+        position: relative;
+
+        &::before {
+          content: '';
+          width: 1250px;
+          height: 125px;
+          background-image: url('../img/gamefi/successful-games.svg');
+          background-repeat: no-repeat;
+          position: absolute;
+          top: -100px;
+          left: 10%;
+
+          @include b(650) {
+            display: none;
+          }
+        }
+
+        .block-head {
+          @include b(650) {
+            margin-bottom: 20px;
+          }
+        }
+
+        .content {
+          .navigation {
+            text-align: center;
+            border: 1px solid #dc2c2c;
+            border-radius: 10em;
+            width: max-content;
+            padding: 5px 20px 4px 20px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+
+            .game-nav {
+              &-prev {
+                margin-right: 5px;
+              }
+
+              &-next {
+                margin-left: 5px;
+              }
+            }
+
+            @include b(650) {
+              margin-bottom: 20px;
+            }
+          }
+
+          .slide {
+            display: grid;
+            grid-template-columns: minmax(300px, 350px) 1fr;
+            grid-gap: 50px;
+
+            @include b(769) {
+              grid-template-columns: minmax(250px, 300px) minmax(350px, 1fr);
+              grid-gap: 20px;
+            }
+
+            @include b(650) {
+              display: flex;
+              flex-direction: column-reverse;
+              text-align: center;
+            }
+
+            .info {
+              .title {
+                font-family: TTCommons, sans-serif;
+                font-weight: 800;
+                font-size: 24px;
+                text-transform: uppercase;
+                color: #DC2C2C;
+                margin-bottom: 25px;
+
+                @include b(1024) {
+                  margin-bottom: 15px;
+                }
+
+                @include b(769) {
+                  font-size: 20px;
+                }
+              }
+
+              .link {
+                font-family: TTCommons, sans-serif;
+                border-radius: 2em;
+                border: 1px solid #DC2C2C;
+                padding: 10px 10px 8px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: max-content;
+                font-size: 20px;
+                line-height: 1;
+
+                @include b(769) {
+                  font-size: 16px;
+                }
+
+                @include b(650) {
+                  margin: 0 auto;
+                }    
+
+                &::after {
+                  content: '';
+                  width: 14px;
+                  height: 12px;
+                  background-image: url('../img/gamefi/link.svg');
+                  background-repeat: no-repeat;
+                  margin-left: 8px;
+                }
+              }
+
+              .text {
+                font-family: TTCommons, sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 22px;
+                margin-top: 30px;
+                
+                @include b(1024) {
+                  margin-top: 20px;
+                }
+
+                @include b(769) {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

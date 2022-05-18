@@ -99,3 +99,24 @@ mixin test
       h2.title Test our game 
       a.button(href="#") Try it now
         img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+
+mixin games
+  - var slides = [{title:'Axie Infinity',link:'axieinfinity.com',text:'Axie Infinity is an online game universe revolving around Pokémon-esque creatures known as Axies. Players can collect Axies as virtual pets with aspirations to battle, breed, collect, raise, and build kingdoms for their Axies.',img: 'axie-infinity'},{title:'Decentraland',link:'decentraland.com',text:'Decentraland is a software running on Ethereum that seeks to incentivize a global network of users to operate a shared virtual world.',img: 'decentraland'},{title:'Forest Knight',link:'forestknight.com',text:'One of the first mobile GameFi games, Forest Knight is a turn-based fantasy RPG that hooks its users by giving them the chance to earn rare NFTs while they beat back the forces of evil.',img: 'forest-knight'}];
+
+  section.games
+    .container 
+      .block-head 
+        h2.title Successful Games
+      .content
+        .swiper.swiper-games
+          .navigation
+            img.game-nav-prev(src="../../img/gamefi/arrow-left.svg" alt="nav left")
+            img.game-nav-next(src="../../img/gamefi/arrow-right.svg" alt="nav right")
+          .swiper-wrapper
+            each slide in slides.length ? slides : ['No values']
+              .swiper-slide.slide
+                .info 
+                  h3.title= slide.title
+                  a.link(href=`https://${slide.link}`)= slide.link
+                  p.text= slide.text
+                +webpImg('lazy',`../../img/gamefi/${slide.img}`,'png',slide.title,'img')
