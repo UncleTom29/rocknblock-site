@@ -122,6 +122,7 @@ $(document).ready(() => {
     slidesPerView: 'auto',
     loop: true,
     centeredSlides: true,
+    spaceBetween: 15,
     navigation: {
       nextEl: '.game-nav-next',
       prevEl: '.game-nav-prev',

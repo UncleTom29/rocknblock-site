@@ -61,8 +61,8 @@
       display: flex;
       align-items: center;
       min-height: 800px;
-      margin-top: 0px;
       background-image: linear-gradient(to bottom, #3a1235, #4a1a4d, #4e265a, #492a5f, #3b2959, #37244d, #321f42, #2d1b37, #281527, #1f101a, #15080e, #000000);
+      margin: 0;
 
       @include b(1024) {
         min-height: 600px;
@@ -146,11 +146,17 @@
         }
 
         .text {
-          font-size: 21px;
-          font-weight: 300;
+          font-size: 28px;
           margin: 0;
 
           @include b(769) {
+            font-size: 25px;
+            margin: 0 auto;
+            line-height: 1;
+          }
+
+          @include b(650) {
+            font-size: 20px;
             margin: 0 auto;
             line-height: 1;
           }
@@ -177,7 +183,7 @@
         .img {
           width: 700px;
           margin-left: -40%;
-          margin-top: 50px;
+          margin-top: 20%;
 
           @include b(1200) {
             width: 500px;
@@ -186,6 +192,299 @@
 
           @include b(769) {
             display: none;
+          }
+        }
+      }
+    }
+
+    .what-is-gamefi {
+      margin: 0 0 50px 0;
+
+      @include b(769) {
+        margin-top: 30px;
+      }
+
+      .title {
+        margin-bottom: 40px;
+
+        @include b(1024) {
+          margin-bottom: 20px;
+        }
+
+        @include b(769) {
+          margin-bottom: 10px;
+        }
+      }
+      
+      .text {
+        font-size: 30px;
+        max-width: 800px;
+
+        @include b(1024) {
+          font-size: 25px;
+        }
+
+        @include b(769) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .features {
+      @include b(650) {
+        margin-top: 0px;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        justify-content: space-between;
+
+        @include b(1024) {
+          grid-gap: 15px;
+        }
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+        background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
+        padding: 35px 20px;
+
+        @include b(550) {
+          padding: 20px;
+        }
+
+        &-top {
+          margin-bottom: 10px;
+
+          @include b(769) {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .img {
+          height: 80px;
+          margin-right: 15px;
+
+          @include b(550) {
+            height: 60px;
+            width: 60px;
+          }
+        }
+        
+        .title {
+          font-size: 20px;
+          text-transform: uppercase;
+          margin-top: 20px;
+        }
+
+        .text {
+          margin-top: 20px;
+          font-size: 22px;
+          font-family: TTCommons, sans-serif;
+          font-weight: 300;
+          line-height: 1.2;
+          opacity: 0.5;
+
+          @include b(550) {
+            margin-top: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .games {
+      .container {
+        position: relative;
+
+        &::before {
+          content: '';
+          width: 1250px;
+          height: 125px;
+          background-image: url('../img/gamefi/successful-games.svg');
+          background-repeat: no-repeat;
+          position: absolute;
+          top: -100px;
+          left: 10%;
+
+          @include b(650) {
+            display: none;
+          }
+        }
+
+        .block-head {
+          @include b(650) {
+            margin-bottom: 20px;
+          }
+        }
+
+        .content {
+          .navigation {
+            text-align: center;
+            border: 1px solid #dc2c2c;
+            border-radius: 10em;
+            width: max-content;
+            padding: 5px 20px 4px 20px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+
+            .game-nav {
+              &-prev {
+                margin-right: 5px;
+              }
+
+              &-next {
+                margin-left: 5px;
+              }
+            }
+
+            @include b(650) {
+              margin-bottom: 20px;
+            }
+          }
+
+          .slide {
+            display: grid;
+            grid-template-columns: minmax(300px, 350px) 1fr;
+            grid-gap: 50px;
+
+            @include b(769) {
+              grid-template-columns: minmax(250px, 300px) minmax(350px, 1fr);
+              grid-gap: 20px;
+            }
+
+            @include b(650) {
+              display: flex;
+              flex-direction: column-reverse;
+              text-align: center;
+            }
+
+            .info {
+              .title {
+                font-family: TTCommons, sans-serif;
+                font-weight: 800;
+                font-size: 24px;
+                text-transform: uppercase;
+                color: #DC2C2C;
+                margin-bottom: 25px;
+
+                @include b(1024) {
+                  margin-bottom: 15px;
+                }
+
+                @include b(769) {
+                  font-size: 20px;
+                }
+              }
+
+              .link {
+                font-family: TTCommons, sans-serif;
+                border-radius: 2em;
+                border: 1px solid #DC2C2C;
+                padding: 10px 10px 8px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: max-content;
+                font-size: 20px;
+                line-height: 1;
+
+                @include b(769) {
+                  font-size: 16px;
+                }
+
+                @include b(650) {
+                  margin: 0 auto;
+                }    
+
+                &::after {
+                  content: '';
+                  width: 14px;
+                  height: 12px;
+                  background-image: url('../img/gamefi/link.svg');
+                  background-repeat: no-repeat;
+                  margin-left: 8px;
+                }
+              }
+
+              .text {
+                font-family: TTCommons, sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 22px;
+                margin-top: 30px;
+                
+                @include b(1024) {
+                  margin-top: 20px;
+                }
+
+                @include b(769) {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .team {
+      .container {
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+        background: linear-gradient(0deg, #000000 14.13%, #272525 79.31%);
+        padding: 50px 20px;
+
+        .img {
+          margin: 0 auto;
+          margin-top: -168px;
+          margin-bottom: 30px;
+          max-width: 590px;
+
+          @include b(769) {
+            max-width: 350px;
+            margin-top: -120px;
+          }
+
+          @include b(550) {
+            max-width: 280px;
+            margin-top: -106px;
+          }
+        }
+
+        .text {
+          font-family: TTCommons, sans-serif;
+          font-size: 30px;
+          text-align: center;
+          line-height: 1.5;
+          max-width: 800px;
+          margin: 0 auto; 
+          margin-bottom: 30px;
+
+          @include b(769) {
+            font-size: 25px;
+            line-height: 1.4;
+          }
+
+          @include b(650) {
+            font-size: 22px;
+            line-height: 1.2;
+            font-weight: 300;
+          }
+        }
+
+        .button {
+          max-width: max-content;
+          margin: 0 auto; 
+
+          img {
+            margin-left: 5px;
           }
         }
       }
@@ -342,7 +641,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            max-width: 400px;
+            max-width: 100%;
           }
 
           .title {
@@ -365,6 +664,7 @@
               font-size: 20px;
               margin-bottom: 15px;
               word-wrap: break-word;
+              font-family: TTCommons, sans-serif;
 
               @include b(769) {
                 font-size: 16px;
@@ -378,143 +678,6 @@
                 height: 24px;
               }
             }
-          }
-        }
-      }
-    }
-
-    .what-is-gamefi {
-      @include b(769) {
-        margin-top: 0px;
-      }
-
-      .title {
-        margin-bottom: 40px;
-      }
-      
-      .text {
-        font-size: 30px;
-        max-width: 800px;
-      }
-    }
-
-
-    .features {
-      .content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 40px;
-        justify-content: space-between;
-
-        @include b(1024) {
-          grid-gap: 15px;
-        }
-      }
-
-      &-item {
-        display: flex;
-        flex-direction: column;
-        border-radius: 24px;
-        background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
-        padding: 35px 20px;
-
-        @include b(550) {
-          padding: 20px;
-        }
-
-        &-top {
-          margin-bottom: 10px;
-
-          @include b(769) {
-            display: flex;
-            align-items: center;
-          }
-        }
-
-        .img {
-          height: 80px;
-          margin-right: 15px;
-
-          @include b(550) {
-            height: 60px;
-            width: 60px;
-          }
-        }
-        
-        .title {
-          font-size: 20px;
-          text-transform: uppercase;
-          margin-top: 20px;
-        }
-
-        .text {
-          margin-top: 20px;
-          font-size: 22px;
-          font-family: TTCommons, sans-serif;
-          font-weight: 300;
-          line-height: 1.2;
-          opacity: 0.5;
-
-          @include b(550) {
-            margin-top: 10px;
-            font-size: 18px;
-          }
-        }
-      }
-    }
-
-    .team {
-      .container {
-        display: flex;
-        flex-direction: column;
-        border-radius: 24px;
-        background: linear-gradient(0deg, #000000 14.13%, #272525 79.31%);
-        padding: 50px 20px;
-
-        .img {
-          margin: 0 auto;
-          margin-top: -168px;
-          margin-bottom: 30px;
-          max-width: 590px;
-
-          @include b(769) {
-            max-width: 350px;
-            margin-top: -120px;
-          }
-
-          @include b(550) {
-            max-width: 280px;
-            margin-top: -106px;
-          }
-        }
-
-        .text {
-          font-family: TTCommons, sans-serif;
-          font-size: 30px;
-          text-align: center;
-          line-height: 1.5;
-          max-width: 800px;
-          margin: 0 auto; 
-          margin-bottom: 30px;
-
-          @include b(769) {
-            font-size: 25px;
-            line-height: 1.4;
-          }
-
-          @include b(650) {
-            font-size: 22px;
-            line-height: 1.2;
-            font-weight: 300;
-          }
-        }
-
-        .button {
-          max-width: max-content;
-          margin: 0 auto; 
-
-          img {
-            margin-left: 5px;
           }
         }
       }
@@ -550,141 +713,6 @@
 
           img {
             margin-left: 5px;
-          }
-        }
-      }
-    }
-
-    .games {
-      .container {
-        position: relative;
-
-        &::before {
-          content: '';
-          width: 1250px;
-          height: 125px;
-          background-image: url('../img/gamefi/successful-games.svg');
-          background-repeat: no-repeat;
-          position: absolute;
-          top: -100px;
-          left: 10%;
-
-          @include b(650) {
-            display: none;
-          }
-        }
-
-        .block-head {
-          @include b(650) {
-            margin-bottom: 20px;
-          }
-        }
-
-        .content {
-          .navigation {
-            text-align: center;
-            border: 1px solid #dc2c2c;
-            border-radius: 10em;
-            width: max-content;
-            padding: 5px 20px 4px 20px;
-            margin: 0 auto;
-            margin-bottom: 50px;
-
-            .game-nav {
-              &-prev {
-                margin-right: 5px;
-              }
-
-              &-next {
-                margin-left: 5px;
-              }
-            }
-
-            @include b(650) {
-              margin-bottom: 20px;
-            }
-          }
-
-          .slide {
-            display: grid;
-            grid-template-columns: minmax(300px, 350px) 1fr;
-            grid-gap: 50px;
-
-            @include b(769) {
-              grid-template-columns: minmax(250px, 300px) minmax(350px, 1fr);
-              grid-gap: 20px;
-            }
-
-            @include b(650) {
-              display: flex;
-              flex-direction: column-reverse;
-              text-align: center;
-            }
-
-            .info {
-              .title {
-                font-family: TTCommons, sans-serif;
-                font-weight: 800;
-                font-size: 24px;
-                text-transform: uppercase;
-                color: #DC2C2C;
-                margin-bottom: 25px;
-
-                @include b(1024) {
-                  margin-bottom: 15px;
-                }
-
-                @include b(769) {
-                  font-size: 20px;
-                }
-              }
-
-              .link {
-                font-family: TTCommons, sans-serif;
-                border-radius: 2em;
-                border: 1px solid #DC2C2C;
-                padding: 10px 10px 8px 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: max-content;
-                font-size: 20px;
-                line-height: 1;
-
-                @include b(769) {
-                  font-size: 16px;
-                }
-
-                @include b(650) {
-                  margin: 0 auto;
-                }    
-
-                &::after {
-                  content: '';
-                  width: 14px;
-                  height: 12px;
-                  background-image: url('../img/gamefi/link.svg');
-                  background-repeat: no-repeat;
-                  margin-left: 8px;
-                }
-              }
-
-              .text {
-                font-family: TTCommons, sans-serif;
-                font-style: normal;
-                font-weight: 300;
-                font-size: 22px;
-                margin-top: 30px;
-                
-                @include b(1024) {
-                  margin-top: 20px;
-                }
-
-                @include b(769) {
-                  font-size: 18px;
-                }
-              }
-            }
           }
         }
       }
