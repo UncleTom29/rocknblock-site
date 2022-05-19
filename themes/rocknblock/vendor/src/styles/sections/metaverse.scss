@@ -1,0 +1,566 @@
+.pg {
+  &-metaverse {
+    overflow: hidden;
+
+    .container {
+      max-width: 1130px;
+    }
+
+    section {
+      margin: 100px 0;
+      display: inline-block;
+      width: 100%;
+
+      @include b(769) {
+        margin: 50px 0;
+      }
+    }
+
+    .block-head {
+      max-width: 850px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 50px;
+
+      .title {
+        font-size: 55px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: TTNorms, sans-serif;
+
+        @include b(1024) {
+          font-size: 40px;
+        }
+
+        @include b(1024) {
+          font-size: 35px;
+        }
+
+        span {
+          color: #DC2C2C;
+        }
+      }
+      
+      .text {
+        font-size: 20px;
+        font-family: TTCommons, sans-serif;
+        max-width: 700px;
+        margin: 0 auto;
+        font-weight: 300;
+        margin-top: 20px;
+        line-height: 1.3;
+      }
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      .container {
+        position: relative;
+      }
+
+      &-title {
+        position: relative;
+
+        .title {
+          display: none;
+        }
+
+        img {
+          margin-bottom: 15px;
+        }
+      }
+      
+      .block-head {
+        width: max-content;
+        margin: 50px auto 50px auto;
+
+        @include b(769) {
+          max-width: 100%;
+          align-items: center;
+          text-align: center;
+          padding: 0 15px;
+        }
+
+        .title {
+          font-size: 50px;
+          line-height: 1;
+          text-transform: uppercase;
+
+          @include b(1200) {
+            font-size: 50px;
+          }
+
+          @include b(769) {
+            font-size: 35px;
+          }
+
+          @include b(650) {
+            font-size: 30px;
+          }
+        }
+
+        .text {
+          font-size: 30px;
+          margin: 0;
+
+          @include b(769) {
+            font-size: 25px;
+            margin: 0 auto;
+            line-height: 1;
+          }
+
+          @include b(650) {
+            font-size: 22px;
+            margin: 0 auto;
+            line-height: 1;
+          }
+        }
+
+        .button {
+          max-width: max-content;
+          font-size: 14px;
+          margin-top: 25px;
+
+          img {
+            margin-left: 10px;
+          }
+
+          @include b(769) {
+            margin: 20px auto;
+          }
+
+          @include b(650) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .img {
+        img {
+          @include b(650) {
+            max-width: 800px;
+          }
+        }
+      }
+    }
+
+    .development {
+      .container {
+        position: relative;
+        min-height: 600px;
+
+        @include b(1024) {
+          min-height: 400px;
+        }
+
+        @include b(650) {
+          min-height: 480px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          background-image: url('../../img/metaverse/development-main.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center right;
+          display: flex;
+          width: 1060px;
+          height: 540px;
+          top: 70px;
+          z-index: -1;
+          right: -185px;
+
+          @include b(1024) {
+            width: 700px;
+            height: 360px;
+            top: 40px;
+            z-index: -1;
+            right: -20px;
+          }
+
+          @include b(769) {
+            width: 600px;
+            height: 310px;
+            top: 110px;
+            right: -20px;
+          }
+
+          @include b(650) {
+            width: 650px;
+            height: 330px;
+            top: 220px;
+            right: -140px;
+          }
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          background-image: url('../../img/metaverse/development-part.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center right;
+          display: flex;
+          width: 660px;
+          height: 410px;
+          bottom: 90px;
+          left: -310px;
+          z-index: -1;
+
+          @include b(1024) {
+            width: 470px;
+            height: 290px;
+            bottom: 40px;
+            left: -190px;
+          }
+
+          @include b(900) {
+            display: none;
+          }
+        }
+      }
+
+      .block-head {
+        max-width: 500px;
+        text-align: left;
+        margin: 0;
+
+        @include b(1024) {
+          max-width: 400px;
+        }
+
+        @include b(650) {
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .text {
+          @include b(650) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .decentralization {
+      .img {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
+    }
+
+    .roadmap {
+      .h-desk {
+        display: none;
+
+        @include b(650) {
+          display: flex;
+        }
+      }
+
+      .h-mob {
+        @include b(650) {
+          display: none;
+        }
+      }
+    }
+
+    .tokenizing {
+      .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 30px;
+        justify-content: space-between;
+
+        @include b(1024) {
+          grid-gap: 15px;
+        }
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+        background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
+        padding: 35px 20px;
+
+        @include b(550) {
+          padding: 20px;
+        }
+
+        &-top {
+          margin-bottom: 10px;
+
+          @include b(769) {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .img {
+          height: 80px;
+          margin-right: 15px;
+
+          @include b(550) {
+            height: 60px;
+            width: 60px;
+          }
+        }
+        
+        .title {
+          font-size: 20px;
+          text-transform: uppercase;
+          margin-top: 20px;
+        }
+
+        .text {
+          margin-top: 20px;
+          font-size: 22px;
+          font-family: TTCommons, sans-serif;
+          font-weight: 300;
+          line-height: 1.2;
+          opacity: 0.5;
+
+          @include b(550) {
+            margin-top: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .variability {
+      .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        grid-gap: 20px;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        @include b(769) {
+          grid-gap: 10px;
+        }
+
+        @include b(650) {
+          grid-template-columns: repeat(3, max-content);
+          grid-gap: 15px;
+          overflow-x: scroll;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+
+      .button {
+        width: max-content;
+        margin: 50px auto 0 auto;
+
+        img {
+          margin-left: 10px;
+        }
+      }
+
+      &-item {
+        border: 2px solid #ffffff33;
+        border-radius: 30px;
+        padding: 30px 25px;
+        max-width: 295px;
+        width: 100%;
+
+        @include b(769) {
+          padding: 30px 15px;
+        }
+
+        @include b(650) {
+          padding: 30px 25px;
+        }
+
+        &.active {
+          max-width: 340px;
+          min-height: 480px;
+          background: linear-gradient(30.15deg, #000000 14.13%, #4A1717 79.31%);
+          border: 2px solid #DC2C2C;
+
+          @include b(1024) {
+            min-height: 450px;
+          }
+
+          @include b(769) {
+            min-height: 420px;
+          }
+
+          @include b(650) {
+            min-height: 480px;
+          }
+
+          .title {
+            font-size: 32px;
+
+            @include b(1024) {
+              font-size: 25px;
+            }
+
+            @include b(769) {
+              font-size: 20px;
+            }
+
+            @include b(650) {
+              font-size: 32px;
+            }
+
+            &::after {
+              background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.67%, #FFFFFF 51.65%, rgba(0, 0, 0, 0) 100%);;
+            }
+          }
+        }
+
+        .title {
+          font-size: 18px;
+          text-align: center;
+          margin-bottom: 25px;
+
+          @include b(1024) {
+            font-size: 16px;
+          }
+
+          @include b(769) {
+            font-size: 14px;
+          }
+
+          @include b(650) {
+            font-size: 18px;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            margin-top: 30px;
+            width: 100%;
+            background-color: #ffffff33;
+            height: 2px;
+          }
+        }
+
+        .not {
+          opacity: 0.6;
+          font-weight: 300;
+        }
+
+        ul {
+          li {
+            font-family: TTCommons, sans-serif;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+
+            @include b(1024) {
+              font-size: 18px;
+            }
+
+            @include b(769) {
+              font-size: 14px;
+            }
+
+            @include b(650) {
+              font-size: 20px;
+            }
+
+            &:last-child() {
+              margin-bottom: 0;
+            }
+
+            &::before {
+              content: '';
+              display: flex;
+              margin-right: 10px;
+              width: 18px;
+              height: 18px;
+              background-image: url('../../img/metaverse/yes.svg');
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: contain;
+            }
+
+            &.not {
+              &::before {
+                content: '';
+                background-image: url('../../img/metaverse/no.svg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .numbers {
+      .block-head {
+        .title {
+          font-size: 35px;
+        }
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(255px, 280px));
+        grid-gap: 30px;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto 0 auto;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+
+        &-img {
+          border-radius: 12px;
+          border: 1px solid #AB231B;
+          padding: 10px;
+          height: 70px;
+          min-width: 70px;
+          width: 70px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 20px;
+        }
+
+        &-content {
+          .title {
+            font-size: 18px;
+          }
+
+          .text {
+            font-size: 17px;
+            opacity: 0.5;
+            margin-top: 5px;
+            font-family: TTCommons, sans-serif;
+          }
+        }
+      }
+    }
+  }
+}

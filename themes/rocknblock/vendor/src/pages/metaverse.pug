@@ -1,0 +1,21 @@
+extends layouts/index
+
+include sections/blocks
+include sections/metaverse
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-metaverse
+		+hero
+		+development
+		+decentralization
+		+roadmap
+		+tokenizing
+		+variability
+		+numbers
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer
