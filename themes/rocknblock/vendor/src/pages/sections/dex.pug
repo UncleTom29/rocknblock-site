@@ -22,17 +22,17 @@ mixin cases
             .swiper-slide.slide
               +webpImg('lazy',`../../img/dex/${slide}`,'png','case','img')
         .navigation
-          img.navIcon.nav-prev(src="../../img/nft/toLeft.svg" alt="nav left")
-          img.navIcon.nav-next(src="../../img/nft/toRight.svg" alt="nav right")
+          img.navIcon.case-nav-prev(src="../../img/nft/toLeft.svg" alt="nav left")
+          img.navIcon.case-nav-next(src="../../img/nft/toRight.svg" alt="nav right")
 
 mixin what-is-dex
   section.what-is-dex
     .container
       .block-head
-        h2.title What is a
+        h2.title What is a 
           span DEX
           | ?
-        p.text DEX is based on a decentralized system - meaning that the server side of these exchanges exists on a blockchain. <br /> Using smart contracts that allow users full control over their assets before a transaction takes place. Thus, DEX is a more secure way to trade because we can avoid some of the restrictions of centralization, such as sanctions. Decentralization is provided by the DAO - a frequent DEX accomplice. All critical decisions are made independently by the community.
+        p.text DEX is based on a decentralized system - meaning that the server side of these exchanges exists on a blockchain. <br /> <br /> Using smart contracts that allow users full control over their assets before a transaction takes place. Thus, DEX is a more secure way to trade because we can avoid some of the restrictions of centralization, such as sanctions. Decentralization is provided by the DAO - a frequent DEX accomplice. All critical decisions are made independently by the community.
 
 mixin decentrlized
   section.decentrlized
@@ -80,9 +80,9 @@ mixin solution
   section.solution
     .container
       .block-head 
-        h2.title Get your custom
+        h2.title Get your custom <br />
           span DEX solution
-      p.text Rock’n’Block customized DEX platform and app solutions are built to foster enterprise market value and enhance high-end securities. We are a certified decentralized exchange development company, hence you visualize and we develop.
+        p.text Rock’n’Block customized DEX platform and app solutions are built to foster enterprise market value and enhance high-end securities. We are a certified decentralized exchange development company, hence you visualize and we develop.
       a.button(href="#contact-us") Contact us now
         img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
       +webpImg('lazy',`../../img/dex/solutions`,'png','solutions','img')
@@ -91,7 +91,7 @@ mixin security
   section.security
     .container
       .block-head
-        h2.title Smart Contracts
+        h2.title Smart Contracts <br />
           span Security Audit
       .content
         a(href="#", target="_blank").security-item
@@ -113,5 +113,6 @@ mixin technologies
       .content
         each item in items.length ? items : ['No values']
           .technologies-item
-            img(loading='lazy' src=`../../img/dex/${item.img}.svg` alt=item.title)
+            .img
+              img(loading='lazy' src=`../../img/dex/${item.img}.svg` alt=item.title)
             h3.title= item.title
