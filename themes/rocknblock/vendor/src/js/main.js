@@ -132,11 +132,11 @@ $(document).ready(() => {
   const sliderCases = new Swiper('.swiper-cases', {
     slidesPerView: 'auto',
     loop: true,
-    spaceBetween: 30,
-    // centeredSlides: true,
+    spaceBetween: 15,
+    centeredSlides: true,
     navigation: {
-      nextEl: '.game-nav-next',
-      prevEl: '.game-nav-prev',
+      nextEl: '.case-nav-next',
+      prevEl: '.case-nav-prev',
     },
   });
 });

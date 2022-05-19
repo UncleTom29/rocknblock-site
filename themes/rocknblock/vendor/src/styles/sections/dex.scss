@@ -60,22 +60,49 @@
     .hero {
       display: flex;
       align-items: center;
-      min-height: 800px;
-
-      @include b(1024) {
-        min-height: 600px;
-      }
-
-      @include b(769) {
-        min-height: 0;
-      }
+      margin: 0;
 
       .container {
+        position: relative;
         padding: 100px 15px;
+        // background-image: url('../../img/dex/hero-bg.png');
+        // background-repeat: no-repeat;
+        // min-height: 600px;
+        // background-size: contain;
+        // background-position: center right;
+
+        @include b(769) {
+          padding: 0;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          background-image: url('../../img/dex/hero-bg.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center right;
+          display: flex;
+          width: 1400px;
+          height: 680px;
+          top: 0;
+          z-index: -1;
+          right: -250px;
+
+          @include b(769) {
+            position: relative;
+            width: 100%;
+            right: 0;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: -50px;
+          }
+        }
       }
       
       .block-head {
-        max-width: 500px;
+        max-width: 600px;
         width: 100%;
         align-items: baseline;
         margin: 0;
@@ -85,10 +112,11 @@
           max-width: 100%;
           align-items: center;
           text-align: center;
+          padding: 0 15px;
         }
 
         .title {
-          font-size: 60px;
+          font-size: 50px;
           line-height: 1;
           text-transform: uppercase;
 
@@ -99,10 +127,14 @@
           @include b(769) {
             font-size: 35px;
           }
+
+          @include b(650) {
+            font-size: 30px;
+          }
         }
 
         .text {
-          font-size: 28px;
+          font-size: 30px;
           margin: 0;
 
           @include b(769) {
@@ -112,7 +144,7 @@
           }
 
           @include b(650) {
-            font-size: 20px;
+            font-size: 22px;
             margin: 0 auto;
             line-height: 1;
           }
@@ -139,16 +171,36 @@
     }
 
     .cases {
-      // cases
+      .slide {
+        width: max-content;
+        padding-left: 15px;
+      }
+
+      .navigation {
+        width: max-content;
+        margin: 40px auto 0 auto;
+
+        .case-nav {
+          &-prev {
+            margin-right: 7px;
+            cursor: pointer;
+          }
+
+          &-next {
+            margin-left: 7px;
+            cursor: pointer;
+          }
+        }
+      }
     }
 
     .what-is-dex {
-      .title {
-        margin-bottom: 40px;
+      @include b(650) {
+        margin-top: 20px;
+      }
 
-        @include b(1024) {
-          margin-bottom: 20px;
-        }
+      .title {
+        margin-bottom: 20px;
 
         @include b(769) {
           margin-bottom: 10px;
@@ -156,26 +208,96 @@
       }
       
       .text {
-        font-size: 30px;
-        max-width: 800px;
-
-        @include b(1024) {
-          font-size: 25px;
-        }
+        font-size: 20px;
+        max-width: 700px;
+        font-weight: 400;
+        line-height: 1.5;
 
         @include b(769) {
-          font-size: 20px;
+          font-size: 18px;
         }
       }
     }
 
     .decentrlized {
-      // decentrlized
+      @include b(650) {
+        margin-top: 0px;
+      }
+
+      .block-head {
+        margin-bottom: 70px;
+
+        @include b(769) {
+          margin-bottom: 50px;
+        }
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        grid-gap: 40px;
+        justify-content: space-between;
+
+        @include b(769) {
+          grid-gap: 15px;
+        }
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 170px;
+        text-align: center;
+        width: 100%;
+
+        @include b(769) {
+          max-width: 100%;
+        }
+
+        .title {
+          font-size: 18px;
+          font-family: TTCommons, sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          @include b(769) {
+            font-size: 16px;
+          }
+        }
+
+        img {
+          margin-bottom: 25px;
+        }
+      }
+
+      .button {
+        width: max-content;
+        margin: 80px auto 0 auto;
+        font-size: 14px;
+
+        @include b(769) {
+          margin-top: 30px;
+        }
+
+        img {
+          margin-left: 10px;
+        }
+      }
     }
 
     .benefits {
       @include b(650) {
-        margin-top: 0px;
+        margin-top: 20px;
+      }
+
+      .block-head {
+        margin-bottom: 70px;
+
+        @include b(650) {
+          margin-bottom: 30px;
+        }
       }
 
       .content {
@@ -242,15 +364,94 @@
     }
 
     .solution {
-      // solution
+      @include b(650) {
+        margin-top: 20px;
+      }
+
+      .block-head {
+        @include b(650) {
+          margin-bottom: 30px;
+        }
+      }
+      
+      .button {
+        width: max-content;
+        margin: 0 auto;
+        margin-bottom: 50px;
+
+        img {
+          margin-left: 10px;
+        }
+      }
     }
 
     .security {
-      // security
+      .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        justify-content: space-between;
+
+        @include b(769) {
+          grid-gap: 20px;
+        }
+      }
+
+      &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 12px;
+        border: 1px solid #6b6b6b;
+        min-height: 120px;
+      }
     }
 
     .technologies {
-      // technologies
+      .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        grid-gap: 30px;
+        justify-content: space-between;
+
+        @include b(769) {
+          grid-gap: 15px;
+        }
+
+        @include b(650) {
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+      }
+
+      &-item {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 12px;
+        border: 1px solid #6b6b6b;
+        padding: 20px;
+        min-height: 140px;
+
+        .title {
+          font-family: TTCommons, sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+
+          @include b(650) {
+            font-size: 14px;
+          }
+        }
+
+        .img {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 60px;
+        }
+      }
     }
   }
 }
