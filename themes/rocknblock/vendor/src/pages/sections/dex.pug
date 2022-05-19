@@ -1,0 +1,117 @@
+include blocks
+
+mixin hero
+  section.hero
+    .container
+      .block-head
+        h1.title Decentralized Exchange (DEX) Development
+        p.text Start your business trip to the potential of p2p transactions with our secure blockchain solutions
+        a.button(href="#contact-us") Start DEX
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+
+mixin cases
+  - var slides = ['slide1','slide2','slide3'];
+
+  section.cases
+    .block-head
+      h2.title Cases
+    .content
+      .swiper.swiper-cases
+        .swiper-wrapper
+          each slide in slides.length ? slides : ['No values']
+            .swiper-slide.slide
+              +webpImg('lazy',`../../img/dex/${slide}`,'png','case','img')
+        .navigation
+          img.navIcon.nav-prev(src="../../img/nft/toLeft.svg" alt="nav left")
+          img.navIcon.nav-next(src="../../img/nft/toRight.svg" alt="nav right")
+
+mixin what-is-dex
+  section.what-is-dex
+    .container
+      .block-head
+        h2.title What is a
+          span DEX
+          | ?
+        p.text DEX is based on a decentralized system - meaning that the server side of these exchanges exists on a blockchain. <br /> Using smart contracts that allow users full control over their assets before a transaction takes place. Thus, DEX is a more secure way to trade because we can avoid some of the restrictions of centralization, such as sanctions. Decentralization is provided by the DAO - a frequent DEX accomplice. All critical decisions are made independently by the community.
+
+mixin decentrlized
+  section.decentrlized
+    .container
+      .block-head
+        h2.title 
+          span Decentralized 
+          | Exchange Development Services
+      .content
+        .decentrlized-item
+          img(loading='lazy' src='../../img/dex/software.svg' alt='DEX software from scratch')
+          h3.title DEX software from scratch
+        .decentrlized-item
+          img(loading='lazy' src='../../img/dex/development.svg' alt='White Label DEX development')
+          h3.title White Label DEX development
+        .decentrlized-item
+          img(loading='lazy' src='../../img/dex/readymade.svg' alt='DEX readymade script')
+          h3.title DEX readymade script
+        .decentrlized-item
+          img(loading='lazy' src='../../img/dex/hybride.svg' alt='hybride DEX services')
+          h3.title hybride DEX services
+      a.button(href="#contact-us") Get free consulatation
+        img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+
+mixin benefits
+  section.benefits
+    .container
+      .block-head 
+        h2.title Business Benefits
+      .content
+        .benefits-item
+          +webpImg('lazy',`../../img/dex/web`,'png','web','img')
+          h3.title No Third-Party Involvement
+          p.text There is no longer a need for an intermediary. Consequently, users are responsible for their own funds, not a centralized platform (keys can be stolen or hacked).
+        .benefits-item
+          +webpImg('lazy',`../../img/dex/money`,'png','money','img')
+          h3.title Higher level of privacy
+          p.text Users are responsible for their funds and there is no middleman in the form of a platform, there is no possibility of censorship (deposits cannot be frozen and users cannot be blocked), no KYC is required to access trading opportunities, and all trading is anonymous.
+        .benefits-item
+          +webpImg('lazy',`../../img/dex/blockchain`,'png','rubik','img')
+          h3.title No Centralized Server Info
+          p.text as there is no supervisory authority, and more importantly, in DEX you can generally do any type of exchange between assets, so you are not limited to instrument listing conditions like in CEX.
+
+mixin solution
+  section.solution
+    .container
+      .block-head 
+        h2.title Get your custom
+          span DEX solution
+      p.text Rock’n’Block customized DEX platform and app solutions are built to foster enterprise market value and enhance high-end securities. We are a certified decentralized exchange development company, hence you visualize and we develop.
+      a.button(href="#contact-us") Contact us now
+        img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+      +webpImg('lazy',`../../img/dex/solutions`,'png','solutions','img')
+
+mixin security
+  section.security
+    .container
+      .block-head
+        h2.title Smart Contracts
+          span Security Audit
+      .content
+        a(href="#", target="_blank").security-item
+          img(loading='lazy' src='../../img/dex/certic.svg' alt='certic logo')
+        a(href="#", target="_blank").security-item
+          img(loading='lazy' src='../../img/dex/hacken.svg' alt='hacken logo')
+        a(href="#", target="_blank").security-item
+          img(loading='lazy' src='../../img/dex/rocknblock.svg' alt='rocknblock logo')
+
+mixin technologies
+  - var items = [{title:'Solidity',img:'solidity'},{title:'Node.js',img:'nodejs'},{title:'React Native',img:'reactnative'},{title:'native Script',img:'nativescript'},{title:'Rust',img:'rust'},{title:'Ethereum',img:'ethereum'},{title:'Polygon',img:'polygon'},{title:'Avalanche',img:'avalanche'},{title:'Solana',img:'solana'},{title:'Binance Smart Chain',img:'binancesmartchain'}];
+
+  section.technologies
+    .container
+      .block-head
+        h2.title Our stack 
+          span technologies
+        p.text Rock’n’Block decentralized exchange development platforms are built using the latest technical capabilities, secure methods, and creative design. Therefore, the following tools are used to develop our websites and applications to ensure a hassle-free user experience.
+      .content
+        each item in items.length ? items : ['No values']
+          .technologies-item
+            img(loading='lazy' src=`../../img/dex/${item.img}.svg` alt=item.title)
+            h3.title= item.title

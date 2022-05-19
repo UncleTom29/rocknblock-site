@@ -1,0 +1,256 @@
+.pg {
+  &-dex {
+    overflow: hidden;
+
+    .container {
+      max-width: 1130px;
+    }
+
+    section {
+      margin: 100px 0;
+      display: inline-block;
+      width: 100%;
+
+      @include b(769) {
+        margin: 50px 0;
+      }
+    }
+
+    .block-head {
+      max-width: 850px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 50px;
+
+      .title {
+        font-size: 55px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: TTNorms, sans-serif;
+
+        @include b(1024) {
+          font-size: 40px;
+        }
+
+        @include b(1024) {
+          font-size: 35px;
+        }
+
+        span {
+          color: #DC2C2C;
+        }
+      }
+      
+      .text {
+        font-size: 20px;
+        font-family: TTCommons, sans-serif;
+        max-width: 700px;
+        margin: 0 auto;
+        font-weight: 300;
+        margin-top: 20px;
+        line-height: 1.3;
+      }
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      min-height: 800px;
+
+      @include b(1024) {
+        min-height: 600px;
+      }
+
+      @include b(769) {
+        min-height: 0;
+      }
+
+      .container {
+        padding: 100px 15px;
+      }
+      
+      .block-head {
+        max-width: 500px;
+        width: 100%;
+        align-items: baseline;
+        margin: 0;
+        text-align: left;
+
+        @include b(769) {
+          max-width: 100%;
+          align-items: center;
+          text-align: center;
+        }
+
+        .title {
+          font-size: 60px;
+          line-height: 1;
+          text-transform: uppercase;
+
+          @include b(1200) {
+            font-size: 50px;
+          }
+
+          @include b(769) {
+            font-size: 35px;
+          }
+        }
+
+        .text {
+          font-size: 28px;
+          margin: 0;
+
+          @include b(769) {
+            font-size: 25px;
+            margin: 0 auto;
+            line-height: 1;
+          }
+
+          @include b(650) {
+            font-size: 20px;
+            margin: 0 auto;
+            line-height: 1;
+          }
+        }
+
+        .button {
+          max-width: max-content;
+          font-size: 14px;
+          margin-top: 25px;
+
+          img {
+            margin-left: 10px;
+          }
+
+          @include b(769) {
+            margin: 20px auto;
+          }
+
+          @include b(650) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .cases {
+      // cases
+    }
+
+    .what-is-dex {
+      .title {
+        margin-bottom: 40px;
+
+        @include b(1024) {
+          margin-bottom: 20px;
+        }
+
+        @include b(769) {
+          margin-bottom: 10px;
+        }
+      }
+      
+      .text {
+        font-size: 30px;
+        max-width: 800px;
+
+        @include b(1024) {
+          font-size: 25px;
+        }
+
+        @include b(769) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .decentrlized {
+      // decentrlized
+    }
+
+    .benefits {
+      @include b(650) {
+        margin-top: 0px;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        justify-content: space-between;
+
+        @include b(1024) {
+          grid-gap: 15px;
+        }
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+        background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
+        padding: 35px 20px;
+
+        @include b(550) {
+          padding: 20px;
+        }
+
+        &-top {
+          margin-bottom: 10px;
+
+          @include b(769) {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .img {
+          height: 80px;
+          margin-right: 15px;
+
+          @include b(550) {
+            height: 60px;
+            width: 60px;
+          }
+        }
+        
+        .title {
+          font-size: 20px;
+          text-transform: uppercase;
+          margin-top: 20px;
+        }
+
+        .text {
+          margin-top: 20px;
+          font-size: 22px;
+          font-family: TTCommons, sans-serif;
+          font-weight: 300;
+          line-height: 1.2;
+          opacity: 0.5;
+
+          @include b(550) {
+            margin-top: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .solution {
+      // solution
+    }
+
+    .security {
+      // security
+    }
+
+    .technologies {
+      // technologies
+    }
+  }
+}
