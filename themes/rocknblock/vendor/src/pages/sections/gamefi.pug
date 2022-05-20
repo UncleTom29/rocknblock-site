@@ -1,0 +1,123 @@
+include blocks
+
+mixin hero
+  section.hero
+    .container
+      .block-head
+        h1.title GameFi Development
+        p.text GameFi new round of game development industry that is increasingly attracting gamers 
+        a.button(href="#contact-us") Create your unique game
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+        +webpImg('lazy',`../../img/gamefi/hero-bottom`,'png','Gamefi development','img')
+      +webpImg('lazy',`../../img/gamefi/hero-main`,'png','Gamefi development','imgmain')
+
+mixin what-is-gamefi
+  section.what-is-gamefi
+    .container
+      .block-head
+        h2.title What is 
+          span GameFi
+          | ?
+        p.text GameFi is a fusion of the words game and finance. It refers to play-to-earn blockchain games that offer economic incentives to players. The GameFi ecosystem uses cryptocurrencies, non-fungible tokens (NFTs), and blockchain technology to create a virtual gaming environment.
+
+mixin features
+  section.features
+    .container
+      .block-head 
+        h2.title Features of GameFI
+      .content
+        .features-item
+          +webpImg('lazy',`../../img/gamefi/auction`,'png','auction','img')
+          h3.title Auction House
+          p.text Fair and trustless bidding of rare and valuable in-game items.
+        .features-item
+          +webpImg('lazy',`../../img/gamefi/startup`,'png','startup','img')
+          h3.title Game Launchpad
+          p.text The only game-specific launchpad, designed to be chain-agnostic.
+        .features-item
+          +webpImg('lazy',`../../img/gamefi/rubik`,'png','rubik','img')
+          h3.title Minigames
+          p.text Simple blockchain games to help new crypto adopters get acquainted with NFTs and Play to Earn models.
+        .features-item
+          +webpImg('lazy',`../../img/gamefi/store`,'png','store','img')
+          h3.title Game Market
+          p.text Multi-chain NFT marketplace exclusively for blockchain game items.
+        .features-item
+          +webpImg('lazy',`../../img/gamefi/money`,'png','money','img')
+          h3.title Yield Guild
+          p.text Token holders can finance Play to Earn gameplay through Scholarships and other creative activities.
+        .features-item
+          +webpImg('lazy',`../../img/gamefi/blocks`,'png','blocks','img')
+          h3.title Game Aggregator
+          p.text Access games and gaming assets of any blockchain from a single user dashboard.
+
+mixin games
+  - var slides = [{title:'Axie Infinity',link:'axieinfinity.com',text:'Axie Infinity is an online game universe revolving around Pokémon-esque creatures known as Axies. Players can collect Axies as virtual pets with aspirations to battle, breed, collect, raise, and build kingdoms for their Axies.',img: 'axie-infinity'},{title:'Decentraland',link:'decentraland.com',text:'Decentraland is a software running on Ethereum that seeks to incentivize a global network of users to operate a shared virtual world.',img: 'decentraland'},{title:'Forest Knight',link:'forestknight.com',text:'One of the first mobile GameFi games, Forest Knight is a turn-based fantasy RPG that hooks its users by giving them the chance to earn rare NFTs while they beat back the forces of evil.',img: 'forest-knight'}];
+
+  section.games
+    .container 
+      .block-head 
+        h2.title Successful Games
+      .content
+        .swiper.swiper-games
+          .navigation
+            img.game-nav-prev(src="../../img/gamefi/arrow-left.svg" alt="nav left")
+            img.game-nav-next(src="../../img/gamefi/arrow-right.svg" alt="nav right")
+          .swiper-wrapper
+            each slide in slides.length ? slides : ['No values']
+              .swiper-slide.slide
+                .info 
+                  h3.title= slide.title
+                  a.link(href=`https://${slide.link}`)= slide.link
+                  p.text= slide.text
+                +webpImg('lazy',`../../img/gamefi/${slide.img}`,'png',slide.title,'img')
+
+mixin team
+  section.team
+    .container
+      +webpImg('lazy',`../../img/gamefi/gamepad`,'png','Gamepad','img')
+      p.text Our team consists of game development professionals. We develop on all types of blockchain, i.e. Ethereum, Binance Smart Chain, Polygon, NEAR and others. We will implement all your ideas and make it better.
+      a.button(href="#contact-us") Contact us now
+        img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+
+mixin profits
+  section.profits
+    .container
+      .block-head
+        h2.title Profits
+      .content
+        .profits-item.reverce
+          .profits-item-content
+            .profits-item-content-wrap
+              h3.title For Game Projects
+              ul.list
+                li Eased holder and player relations
+                li Player-centric development funding
+                li Rapid exposure to the game and its items
+          +webpImg('lazy',`../../img/gamefi/for-game-projects`,'png','Game Projects','img')
+        .profits-item
+          +webpImg('lazy',`../../img/gamefi/for-game-investors`,'png','Game Investors','img')
+          .profits-item-content
+            .profits-item-content-wrap
+              h3.title For Game Investors
+              ul.list
+                li Eased onboarding of scholars
+                li First access to major games' tokens
+                li Better liquidity for game assets
+        .profits-item.reverce
+          .profits-item-content
+            .profits-item-content-wrap
+              h3.title For Game Players
+              ul.list
+                li No-cost access to play2earn games as a scholar
+                li Quick and easy access and features of all games
+                li A liquid market for all game items 
+          +webpImg('lazy',`../../img/gamefi/for-game-players`,'png','Game Players','img')
+
+mixin test
+  section.test
+    .container 
+      h2.title Test our game 
+      a.button(href="#") Try it now
+        img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+

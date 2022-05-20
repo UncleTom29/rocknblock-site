@@ -1,0 +1,23 @@
+extends layouts/index
+
+include sections/blocks
+include sections/security-audit
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-security-audit
+		+hero
+		+about
+		+security
+		+numbers
+		+solution
+		+why
+		+partners
+		+achievements
+		+trust
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer

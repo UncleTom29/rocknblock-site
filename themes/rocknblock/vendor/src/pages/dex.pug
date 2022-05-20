@@ -1,0 +1,22 @@
+extends layouts/index
+
+include sections/blocks
+include sections/dex
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-dex
+		+hero
+		+cases
+		+what-is-dex
+		+decentrlized
+		+benefits
+		+solution
+		+security
+		+technologies
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer

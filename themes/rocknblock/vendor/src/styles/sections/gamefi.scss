@@ -1,0 +1,728 @@
+.pg {
+  &-gamefi {
+    overflow: hidden;
+
+    .container {
+      max-width: 1130px;
+    }
+
+    section {
+      margin: 100px 0;
+      display: inline-block;
+      width: 100%;
+
+      @include b(769) {
+        margin: 50px 0;
+      }
+    }
+
+    .block-head {
+      max-width: 850px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 50px;
+
+      .title {
+        font-size: 55px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: TTNorms, sans-serif;
+
+        @include b(1024) {
+          font-size: 40px;
+        }
+
+        @include b(1024) {
+          font-size: 35px;
+        }
+
+        span {
+          color: #DC2C2C;
+        }
+      }
+      
+      .text {
+        font-size: 20px;
+        font-family: TTCommons, sans-serif;
+        max-width: 700px;
+        margin: 0 auto;
+        font-weight: 300;
+        margin-top: 20px;
+        line-height: 1.3;
+      }
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      min-height: 800px;
+      background-image: linear-gradient(to bottom, #3a1235, #4a1a4d, #4e265a, #492a5f, #3b2959, #37244d, #321f42, #2d1b37, #281527, #1f101a, #15080e, #000000);
+      margin: 0;
+
+      @include b(1024) {
+        min-height: 600px;
+      }
+
+      @include b(769) {
+        min-height: 0;
+      }
+
+      .container {
+        padding: 100px 15px;
+        display: grid;
+        grid-template-columns: minmax(300px, 450px) minmax(450px, 1fr);
+        grid-gap: 80px;
+
+        @include b(1200) {
+          grid-gap: 100px;
+        }
+
+        @include b(769) {
+          display: flex;
+          flex-direction: column-reverse;
+          grid-gap: 0;
+          padding: 20px 15px;
+        }
+
+        .imgmain {
+          width: 700px;
+          margin-left: 10%;
+
+          &::before {
+            content: '';
+            // background-image: url('../img/gamefi/hero-top.png');
+            background-image: url('../images/site/gamefi/hero-top.png');
+            width: 37px;
+            height: 37px;
+            display: block;
+            margin-left: 25%;
+
+            @include b(769) {
+              display: none;
+            }
+          }
+
+          @include b(1200) {
+            margin-left: 0;
+            width: auto;
+          }
+
+          @include b(769) {
+            max-width: 450px;
+            margin: 0 auto;
+          }
+        }
+      }
+      
+      .block-head {
+        max-width: 500px;
+        width: 100%;
+        align-items: baseline;
+        margin: 0;
+        text-align: left;
+
+        @include b(769) {
+          max-width: 100%;
+          align-items: center;
+          text-align: center;
+        }
+
+        .title {
+          font-size: 60px;
+          line-height: 1;
+          text-transform: uppercase;
+
+          @include b(1200) {
+            font-size: 50px;
+          }
+
+          @include b(769) {
+            font-size: 35px;
+          }
+        }
+
+        .text {
+          font-size: 28px;
+          margin: 0;
+
+          @include b(769) {
+            font-size: 25px;
+            margin: 0 auto;
+            line-height: 1;
+          }
+
+          @include b(650) {
+            font-size: 20px;
+            margin: 0 auto;
+            line-height: 1;
+          }
+        }
+
+        .button {
+          max-width: max-content;
+          font-size: 14px;
+          margin-top: 25px;
+
+          img {
+            margin-left: 10px;
+          }
+
+          @include b(769) {
+            margin: 20px auto;
+          }
+
+          @include b(650) {
+            font-size: 12px;
+          }
+        }
+
+        .img {
+          width: 700px;
+          margin-left: -40%;
+          margin-top: 20%;
+
+          @include b(1200) {
+            width: 500px;
+            margin-left: -20%;
+          }
+
+          @include b(769) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .what-is-gamefi {
+      margin: 0 0 50px 0;
+
+      @include b(769) {
+        margin-top: 30px;
+      }
+
+      .title {
+        margin-bottom: 40px;
+
+        @include b(1024) {
+          margin-bottom: 20px;
+        }
+
+        @include b(769) {
+          margin-bottom: 10px;
+        }
+      }
+      
+      .text {
+        font-size: 30px;
+        max-width: 800px;
+
+        @include b(1024) {
+          font-size: 25px;
+        }
+
+        @include b(769) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .features {
+      @include b(650) {
+        margin-top: 0px;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        justify-content: space-between;
+
+        @include b(1024) {
+          grid-gap: 15px;
+        }
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+        background: linear-gradient(30.15deg, #000000 14.13%, #272525 79.31%);
+        padding: 35px 20px;
+
+        @include b(550) {
+          padding: 20px;
+        }
+
+        &-top {
+          margin-bottom: 10px;
+
+          @include b(769) {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .img {
+          height: 80px;
+          margin-right: 15px;
+
+          @include b(550) {
+            height: 60px;
+            width: 60px;
+          }
+        }
+        
+        .title {
+          font-size: 20px;
+          text-transform: uppercase;
+          margin-top: 20px;
+        }
+
+        .text {
+          margin-top: 20px;
+          font-size: 22px;
+          font-family: TTCommons, sans-serif;
+          font-weight: 300;
+          line-height: 1.2;
+          opacity: 0.5;
+
+          @include b(550) {
+            margin-top: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .games {
+      .container {
+        position: relative;
+
+        &::before {
+          content: '';
+          width: 1250px;
+          height: 125px;
+          // background-image: url('../img/gamefi/successful-games.svg');
+          background-image: url('../images/site/gamefi/successful-games.svg');
+          background-repeat: no-repeat;
+          position: absolute;
+          top: -100px;
+          left: 10%;
+
+          @include b(650) {
+            display: none;
+          }
+        }
+
+        .block-head {
+          @include b(650) {
+            margin-bottom: 20px;
+          }
+        }
+
+        .content {
+          .navigation {
+            text-align: center;
+            border: 1px solid #dc2c2c;
+            border-radius: 10em;
+            width: max-content;
+            padding: 5px 20px 4px 20px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+
+            .game-nav {
+              &-prev {
+                margin-right: 5px;
+              }
+
+              &-next {
+                margin-left: 5px;
+              }
+            }
+
+            @include b(650) {
+              margin-bottom: 20px;
+            }
+          }
+
+          .slide {
+            display: grid;
+            grid-template-columns: minmax(300px, 350px) 1fr;
+            grid-gap: 50px;
+
+            @include b(769) {
+              grid-template-columns: minmax(250px, 300px) minmax(350px, 1fr);
+              grid-gap: 20px;
+            }
+
+            @include b(650) {
+              display: flex;
+              flex-direction: column-reverse;
+              text-align: center;
+            }
+
+            .info {
+              .title {
+                font-family: TTCommons, sans-serif;
+                font-weight: 800;
+                font-size: 24px;
+                text-transform: uppercase;
+                color: #DC2C2C;
+                margin-bottom: 25px;
+
+                @include b(1024) {
+                  margin-bottom: 15px;
+                }
+
+                @include b(769) {
+                  font-size: 20px;
+                }
+              }
+
+              .link {
+                font-family: TTCommons, sans-serif;
+                border-radius: 2em;
+                border: 1px solid #DC2C2C;
+                padding: 10px 10px 8px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: max-content;
+                font-size: 20px;
+                line-height: 1;
+
+                @include b(769) {
+                  font-size: 16px;
+                }
+
+                @include b(650) {
+                  margin: 0 auto;
+                }    
+
+                &::after {
+                  content: '';
+                  width: 14px;
+                  height: 12px;
+                  // background-image: url('../img/gamefi/link.svg');
+                  background-image: url('../images/site/gamefi/link.svg');
+                  background-repeat: no-repeat;
+                  margin-left: 8px;
+                }
+              }
+
+              .text {
+                font-family: TTCommons, sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 22px;
+                margin-top: 30px;
+                
+                @include b(1024) {
+                  margin-top: 20px;
+                }
+
+                @include b(769) {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .team {
+      .container {
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+        background: linear-gradient(0deg, #000000 14.13%, #272525 79.31%);
+        padding: 50px 20px;
+
+        .img {
+          margin: 0 auto;
+          margin-top: -168px;
+          margin-bottom: 30px;
+          max-width: 590px;
+
+          @include b(769) {
+            max-width: 350px;
+            margin-top: -120px;
+          }
+
+          @include b(550) {
+            max-width: 280px;
+            margin-top: -106px;
+          }
+        }
+
+        .text {
+          font-family: TTCommons, sans-serif;
+          font-size: 30px;
+          text-align: center;
+          line-height: 1.5;
+          max-width: 800px;
+          margin: 0 auto; 
+          margin-bottom: 30px;
+
+          @include b(769) {
+            font-size: 25px;
+            line-height: 1.4;
+          }
+
+          @include b(650) {
+            font-size: 22px;
+            line-height: 1.2;
+            font-weight: 300;
+          }
+        }
+
+        .button {
+          max-width: max-content;
+          margin: 0 auto; 
+
+          img {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    .profits {
+      .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 80px;
+        
+        @include b(650) {
+          grid-gap: 50px;
+        }
+      }
+
+      &-item {
+        display: grid;
+        grid-template-columns: minmax(300px, 540px) minmax(300px, 1fr);
+        grid-gap: 50px;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        @include b(1024) {
+          grid-gap: 20px;
+        }
+
+        @include b(650) {
+          grid-template-columns: 1fr;
+        }
+
+        @include b(650) {
+          &::before {
+            display: none;
+          }
+        }
+
+        &:nth-child(1) {
+          &::before {
+            position: absolute;
+            content: '';
+            // background-image: url('../img/gamefi/profits-1.svg');
+            background-image: url('../images/site/gamefi/profits-1.svg');
+            width: 175px;
+            height: 155px;
+            right: -70px;
+            top: 10px;
+          }
+        }
+
+        &:nth-child(2) {
+          &::before {
+            position: absolute;
+            content: '';
+            // background-image: url('../img/gamefi/profits-2.svg');
+            background-image: url('../images/site/gamefi/profits-2.svg');
+            background-position: center;
+            background-size: auto;
+            width: 125px;
+            height: 120px;
+            top: -100px;
+            left: -60px;
+          }
+        }
+
+        &:nth-child(3) {
+          &::before {
+            position: absolute;
+            content: '';
+            // background-image: url('../img/gamefi/profits-3.svg');
+            background-image: url('../images/site/gamefi/profits-3.svg');
+            width: 45px;
+            height: 45px;
+            right: 40px;
+            top: -70px;
+          }
+        }
+        
+        &.reverce {
+          grid-template-columns: minmax(300px, 1fr) minmax(300px, 540px);
+
+          @include b(650) {
+            grid-template-columns: 1fr;
+          }
+
+          .profits-item-content {
+            text-align: right;
+            justify-content: flex-end;
+
+            @include b(650) {
+              text-align: left;
+              justify-content: flex-start;
+              order: 2;
+            }
+
+            &-wrap {
+              align-items: flex-end;
+
+              @include b(650) {
+                align-items: flex-start;
+              }
+            }
+
+            .list {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+
+              @include b(650) {
+                align-items: baseline;
+              }
+
+              li {
+                grid-column: 1;
+                grid-row: 1;
+                grid-template-columns: 1fr max-content;
+
+                &::before {
+                  grid-row: 1;
+                  grid-column: 2;
+                }
+
+                @include b(650) {
+                  grid-template-columns: max-content 1fr;
+                  grid-column: 2;
+                  grid-row: 1;
+
+                  &::before {
+                    grid-row: 1;
+                    grid-column: 1;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .img {
+          border-radius: 25px;
+          overflow: hidden;
+          height: max-content;
+          display: flex;
+
+          @include b(650) {
+            width: 100%;
+            max-width: max-content;
+            margin: 0 auto 20px auto;
+            border-radius: 0;
+          }
+        }
+
+        &-content {
+          display: flex;
+
+          &-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 100%;
+          }
+
+          .title {
+            font-size: 25px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+
+            @include b(769) {
+              font-size: 22px;
+              margin-bottom: 20px;
+            }
+          }
+
+          .list {
+            li {
+              display: grid;
+              grid-template-columns: max-content 1fr;
+              grid-gap: 10px;
+              align-items: center;
+              font-size: 20px;
+              margin-bottom: 15px;
+              word-wrap: break-word;
+              font-family: TTCommons, sans-serif;
+
+              @include b(769) {
+                font-size: 16px;
+                margin-bottom: 10px;
+              }
+
+              &::before {
+                content: '';
+                // background-image: url('../img/icons/icon-lightning-red.svg');
+                background-image: url('../images/site/icons/icon-lightning-red.svg');
+                width: 16px;
+                height: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .test {
+      background-color: #393939;
+
+      .container {
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include b(769) {
+          min-height: 350px;
+        }
+
+        .title {
+          text-transform: uppercase;
+          font-size: 60px;
+          margin-bottom: 10px;
+          text-align: center;
+
+          @include b(769) {
+            font-size: 40px;
+          }
+        }
+
+        .button {
+          max-width: max-content;
+
+          img {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+extends layouts/index
+
+include sections/blocks
+include sections/tools
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-tools
+		+hero
+		+what-are
+		+interface
+		+tracking
+		+need
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer

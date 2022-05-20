@@ -117,4 +117,26 @@ $(document).ready(() => {
       prevEl: '.nav-prev',
     },
   });
+
+  const sliderGames = new Swiper('.swiper-games', {
+    slidesPerView: 'auto',
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 15,
+    navigation: {
+      nextEl: '.game-nav-next',
+      prevEl: '.game-nav-prev',
+    },
+  });
+
+  const sliderCases = new Swiper('.swiper-cases', {
+    slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 15,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.case-nav-next',
+      prevEl: '.case-nav-prev',
+    },
+  });
 });
