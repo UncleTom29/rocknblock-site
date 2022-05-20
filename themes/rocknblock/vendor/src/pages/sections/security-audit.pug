@@ -1,0 +1,141 @@
+include blocks
+
+mixin hero
+  section.hero
+    .container
+      .block-head
+        h1.title ROCK'N'BLOCK Blockchain 
+          span Security Audit
+        p.text Don’t let a security threat ruin your day. Have your code checked for Security, Vulnerabilities and Errors
+        a.button(href="#contact-us") Request Audit 
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+      +webpImg('lazy',`../../img/security-audit/hero`,'png','security audit','img')
+
+mixin about
+  section.about
+    .container
+      .block-head
+        h2.title About
+        p.text Being the Leading Smart Contract Creator, with over 46 000 smart contracts launched on various blockchain protocols, ROCK'N'BLOCK strives to bring the blockchain network to mass adoption by making it secure, simple, and user-friendly. <br /><br />Our team is striving to share our expertise in blockchain development and cyber security with other projects working in the crypto and blockchain industry as well as other enthusiasts. Along with the growing interest in blockchain technology and crypto, the industry is getting extensive attention from hackers.
+
+mixin security
+  section.security
+    .container
+      +webpImg('lazy',`../../img/security-audit/locks`,'png','security audit locks','img')
+      .block-head
+        h2.title What are 
+          span security <br />
+          | audits for?
+        p.text Security and vulnerabilities assessment will allow to define code errors, vulnerabilities, and program logic check. Highly professional and profound audit report will save you time and funds and foresee the possible cyber threats.
+        a.button(href="#contact-us") Contact us now
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+
+mixin numbers
+  section.numbers
+    .container
+      .block-head 
+        h2.title Some 
+          span numbers
+          | :
+      .content
+        .numbers-item
+          h3.title $3,7
+          span.number  Trillion 
+          span.text were lost by hacker attacks in 2020
+        .numbers-item
+          h3.title $3.86
+          span.number million
+          span.text were lost by hacker attacks in 2020
+        .numbers-item
+          h3.title 2,200
+          span.text cyberattacks Daily 
+
+mixin solution
+  section.solution
+    .container
+      .block-head 
+        h2.title Solution
+      .content
+        h3.title Contracts and Blockchain protocols security assessment
+        p.text Have your contract, DApp, Blockchain protocol checked to define code errors, vulnerabilities, and foresee threats.
+        a.button(href="#contact-us") Learn more
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+
+mixin why 
+  section.why
+    .container
+      .block-head 
+        h2.title Why ROCK'N'BLOCK 
+          span Audit report
+      .content
+        .why-item
+          +webpImg('lazy',`../../img/security-audit/skilled`,'png','skilled','img')
+          p.text Highly skilled team of auditors with over than 10 years of experience.
+        .why-item
+          +webpImg('lazy',`../../img/security-audit/solution`,'png','solution','img')
+          p.text Complete solution from the 0 point to the security recommendations implementation.
+        .why-item
+          +webpImg('lazy',`../../img/security-audit/contract`,'png','contract','img')
+          p.text Experience of Smart contracts development (over 30 000 smart contracts deployed)
+        .why-item
+          +webpImg('lazy',`../../img/security-audit/tests`,'png','tests','img')
+          p.text Combination of manual and auto tests
+      a.button(href="#contact-us") Get free consulatation
+        img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+
+mixin partners
+  section.partners
+    .container
+      .block-head
+        h2.title Partners
+      .content
+        .partners-item
+          img(loading='lazy' src='../../img/security-audit/binance-logo.svg' alt='binance smart chain logo')
+          span.title Binance
+        .partners-item
+          img(loading='lazy' src='../../img/security-audit/waves-logo.svg' alt='waves logo')
+          span.title Waves
+        .partners-item
+          img(loading='lazy' src='../../img/security-audit/neo-logo.svg' alt='neo logo')
+          span.title NEO
+        .partners-item
+          img(loading='lazy' src='../../img/security-audit/okex.svg' alt='okex logo')
+          span.title OKEX
+        .partners-item
+          img(loading='lazy' src='../../img/security-audit/meetone-logo.svg' alt='meet.one logo')
+        .partners-item
+          img(loading='lazy' src='../../img/security-audit/bancor-logo.svg' alt='bancor logo')
+          span.title Bancor
+        .partners-item
+          img(loading='lazy' src='../../img/security-audit/polonidex-logo.svg' alt='poloni dex logo')
+        .partners-item
+          img(loading='lazy' src='../../img/security-audit/bestrate-logo.svg' alt='best rate logo')
+
+mixin achievements
+  section.achievements
+    .container
+      .block-head
+        h2.title Our achievements
+      .content
+        img(loading='lazy' src='../../img/security-audit/binance.svg' alt='binance smart chain')
+        img(loading='lazy' src='../../img/security-audit/neo.svg' alt='neo')
+        img(loading='lazy' src='../../img/security-audit/polygon.svg' alt='polygon')
+        img(loading='lazy' src='../../img/security-audit/certic.svg' alt='certic')
+        img(loading='lazy' src='../../img/security-audit/tron.svg' alt='tron')
+        img(loading='lazy' src='../../img/security-audit/waves.svg' alt='waves')
+
+mixin trust
+  section.trust
+    .container
+      .block-head
+        h2.title Trust from users
+      .content
+        .trust-item
+          span.number 4
+          span.title years
+        .trust-item
+          span.number 28,544
+          span.title Smart <br /> Contracts
+        .trust-item
+          span.number 40,324
+          span.title users
