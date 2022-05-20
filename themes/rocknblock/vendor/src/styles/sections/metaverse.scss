@@ -170,7 +170,8 @@
         &::before {
           content: '';
           position: absolute;
-          background-image: url('../../img/metaverse/development-main.png');
+          // background-image: url('../../img/metaverse/development-main.png');
+          background-image: url('../images/site/metaverse/development-main.png');
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center right;
@@ -207,7 +208,8 @@
         &::after {
           content: '';
           position: absolute;
-          background-image: url('../../img/metaverse/development-part.png');
+          // background-image: url('../../img/metaverse/development-part.png');
+          background-image: url('../images/site/metaverse/development-part.png');
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center right;
@@ -495,7 +497,8 @@
               margin-right: 10px;
               width: 18px;
               height: 18px;
-              background-image: url('../../img/metaverse/yes.svg');
+              // background-image: url('../../img/metaverse/yes.svg');
+              background-image: url('../images/site/metaverse/yes.svg');
               background-repeat: no-repeat;
               background-position: center center;
               background-size: contain;
@@ -504,7 +507,8 @@
             &.not {
               &::before {
                 content: '';
-                background-image: url('../../img/metaverse/no.svg');
+                // background-image: url('../../img/metaverse/no.svg');
+                background-image: url('../images/site/metaverse/no.svg');
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: contain;

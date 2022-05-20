@@ -165,7 +165,8 @@
           content: '';
           position: absolute;
           display: flex;
-          background-image: url('../../img/security-audit/wave.png');
+          // background-image: url('../../img/security-audit/wave.png');
+          background-image: url('../images/site/security-audit/wave.png');
           background-repeat: no-repeat;
           background-size: contain;
           z-index: -1;
@@ -211,7 +212,8 @@
           display: flex;
           width: 900px;
           height: 880px;
-          background-image: url('../../img/security-audit/security.png');
+          // background-image: url('../../img/security-audit/security.png');
+          background-image: url('../images/site/security-audit/security.png');
           background-repeat: no-repeat;
           background-size: contain;
           z-index: -1;
@@ -291,7 +293,8 @@
           display: flex;
           width: 1000px;
           height: 650px;
-          background-image: url('../../img/security-audit/numbers.png');
+          // background-image: url('../../img/security-audit/numbers.png');
+          background-image: url('../images/site/security-audit/numbers.png');
           background-repeat: no-repeat;
           background-size: contain;
           z-index: -1;
@@ -405,7 +408,8 @@
           content: '';
           position: absolute;
           display: flex;
-          background-image: url('../../img/security-audit/solution.svg');
+          // background-image: url('../../img/security-audit/solution.svg');
+          background-image: url('../images/site/security-audit/solution.svg');
           background-repeat: no-repeat;
           background-size: contain;
           z-index: -1;
@@ -428,7 +432,8 @@
 
           @include b(650) {
             position: relative;
-            background-image: url('../../img/security-audit/solution-mob.svg');
+            // background-image: url('../../img/security-audit/solution-mob.svg');
+            background-image: url('../images/site/security-audit/solution-mob.svg');
             top: 0;
             left: 0;
             transform: none;
@@ -535,7 +540,8 @@
           content: '';
           position: absolute;
           display: flex;
-          background-image: url('../../img/security-audit/wave.png');
+          // background-image: url('../../img/security-audit/wave.png');
+          background-image: url('../images/site/security-audit/wave.png');
           background-repeat: no-repeat;
           background-size: contain;
           z-index: -1;
@@ -690,7 +696,8 @@
           display: flex;
           width: 380px;
           height: 380px;
-          background-image: url('../../img/security-audit/trust.png');
+          // background-image: url('../../img/security-audit/trust.png');
+          background-image: url('../images/site/security-audit/trust.png');
           background-repeat: no-repeat;
           background-size: contain;
           z-index: -1;
