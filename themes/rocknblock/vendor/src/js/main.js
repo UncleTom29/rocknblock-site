@@ -35,14 +35,39 @@ $(document).ready(() => {
     el.addEventListener('click', () => {
       el.hidden = true;
       const menuType = el.classList.contains('ic-open') ? 'ic-close' : 'ic-open';
-      const navCl = document.getElementById('nav-pages').classList;
+      const navCl = document.getElementById('nav-pages');
+
+      navCl.childNodes.forEach((cEl) => {
+        cEl.addEventListener('click', () => { 
+          if(window.innerWidth <= 769) {
+            document.getElementsByClassName('ic-open')[0].hidden = false;
+            document.getElementsByClassName('ic-close')[0].hidden = true;
+            navCl.classList.remove('menu-open');
+          }
+        });
+      })
 
       document.getElementsByClassName(menuType)[0].hidden = false;
-      menuType !== 'ic-open' ? navCl.add('menu-open') : navCl.remove('menu-open');
+      menuType !== 'ic-open' ? navCl.classList.add('menu-open') : navCl.classList.remove('menu-open');
     });
   });
 
-  const sliderFeedback = new Swiper('.swiper-feedback', {
+  if (document.getElementsByClassName('blog-select-nav').length !== 0) {
+    Array.from(document.getElementsByClassName('blog-select-nav')).forEach((el) => {
+      el.addEventListener('click', () => {
+        document.getElementsByClassName('active')[0].classList.remove('active');
+        el.classList.add('active');
+        filterSelection(el.dataset.filter);
+        window.dispatchEvent(new Event('resize'));
+      });
+    });
+
+    const filterSelection = (c) => Array.from(document.getElementsByClassName('blog-item')).forEach((el) => (el.hidden = el.dataset.category === c ? false : c !== 'all'));
+  }
+
+  // Sliders
+
+  new Swiper('.swiper-feedback', {
     slidesPerView: 1,
     spaceBetween: 0,
     autoplay: {
@@ -62,7 +87,7 @@ $(document).ready(() => {
     },
   });
 
-  const sliderBlog = new Swiper('.blog-slider', {
+  new Swiper('.blog-slider', {
     slidesPerView: 1,
     spaceBetween: 15,
     breakpoints: {
@@ -80,7 +105,7 @@ $(document).ready(() => {
     },
   });
 
-  const sliderBottom = new Swiper('.swiper-slider', {
+  new Swiper('.swiper-slider', {
     slidesPerView: 'auto',
     loop: true,
     navigation: {
@@ -89,26 +114,13 @@ $(document).ready(() => {
     },
   });
 
-  if (document.getElementsByClassName('blog-select-nav').length !== 0) {
-    Array.from(document.getElementsByClassName('blog-select-nav')).forEach((el) => {
-      el.addEventListener('click', () => {
-        document.getElementsByClassName('active')[0].classList.remove('active');
-        el.classList.add('active');
-        filterSelection(el.dataset.filter);
-        window.dispatchEvent(new Event('resize'));
-      });
-    });
-
-    const filterSelection = (c) => Array.from(document.getElementsByClassName('blog-item')).forEach((el) => (el.hidden = el.dataset.category === c ? false : c !== 'all'));
-  }
-
-  const sliderPorfolio = new Swiper('.swiper-portfolio', {
+  new Swiper('.swiper-portfolio', {
     slidesPerView: 'auto',
     loop: true,
     spaceBetween: 15,
   });
 
-  const sliderBusiness = new Swiper('.swiper-business', {
+  new Swiper('.swiper-business', {
     slidesPerView: 'auto',
     loop: true,
     centeredSlides: true,
@@ -118,7 +130,7 @@ $(document).ready(() => {
     },
   });
 
-  const sliderGames = new Swiper('.swiper-games', {
+  new Swiper('.swiper-games', {
     slidesPerView: 'auto',
     loop: true,
     centeredSlides: true,
@@ -129,7 +141,7 @@ $(document).ready(() => {
     },
   });
 
-  const sliderCases = new Swiper('.swiper-cases', {
+  new Swiper('.swiper-cases', {
     slidesPerView: 'auto',
     loop: true,
     spaceBetween: 15,
