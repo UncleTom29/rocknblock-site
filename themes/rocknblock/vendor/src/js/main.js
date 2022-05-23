@@ -142,10 +142,16 @@ $(document).ready(() => {
   });
 
   new Swiper('.swiper-cases', {
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     loop: true,
     spaceBetween: 15,
     centeredSlides: true,
+    breakpoints: {
+      550: {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+      },
+    },
     navigation: {
       nextEl: '.case-nav-next',
       prevEl: '.case-nav-prev',
