@@ -128,7 +128,7 @@ class Feedback extends ComponentBase
         if($integration) $integration->update(['data_fields' => $arrParams['data_fields']]);
         else DB::table('amaryfilo_integrations')->insert($arrParams);
 
-        return $response['accessToken'];
+        return $response['access_token'];
     }
 
     protected function checkAccessToken() {
