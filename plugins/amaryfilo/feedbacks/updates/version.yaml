@@ -6,3 +6,7 @@
     - Init feedback plugin by Amary Filo
     - Create feedback table
     - create_feedback_table.php
+1.0.3:
+    - Add integrations
+    - Create integrations table
+    - create_integrations_table.php
