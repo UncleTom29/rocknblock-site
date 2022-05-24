@@ -80,9 +80,9 @@ class Feedback extends ComponentBase
 
         $mailAdmins = explode(',',env('MAIL_REQUEST_TO'));
 
-        // foreach ($mailAdmins as $mailAdmin) {
-        //     Mail::sendTo($mailAdmin, 'amaryfilo.feedbacks::mail.feedback', $data);
-        // }
+        foreach ($mailAdmins as $mailAdmin) {
+            Mail::sendTo($mailAdmin, 'amaryfilo.feedbacks::mail.feedback', $data);
+        }
         
         if(post('type') === 'email') Mail::sendTo(trim(post('contact')), 'amaryfilo.feedbacks::mail.request', ['name' => post('name')]);
 
