@@ -1,5 +1,6 @@
 {
     "name": "rocknblock-website",
+    "version": "1.0.5",
     "description": "Rocnblock website.",
     "directories": {
         "test": "tests/js/cases",
@@ -8,6 +9,11 @@
     "scripts": {
         "test": "mocha --require @babel/register tests/js/cases/**/*.js"
     },
+    "author": {
+        "name": "Amary Filo",
+        "email": "amaryfilo@gmail.com",
+        "url": "https://amaryfilo.com"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/wintercms/winter.git"
@@ -15,7 +21,8 @@
     "contributors": [
         {
             "name": "Amary Filo",
-            "email": "amaryfilo@gmail.com"
+            "email": "amaryfilo@gmail.com",
+            "url": "https://amaryfilo.com"
         }
     ],
     "license": "MIT",
