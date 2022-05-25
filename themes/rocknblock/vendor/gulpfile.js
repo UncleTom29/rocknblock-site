@@ -14,7 +14,6 @@ const favicons = require("./gulp/tasks/favicons");
 const plugins = require("./gulp/tasks/plugins");
 const imgsWebp = require("./gulp/tasks/imgsWebp");
 const manifest = require("./gulp/tasks/manifest");
-// const copyDependencies = require("./gulp/tasks/copyDependencies");
 
 const dev = gulp.parallel(
   pug2html,
@@ -30,7 +29,6 @@ const dev = gulp.parallel(
   manifest
 );
 
-// const build = gulp.series(clean, copyDependencies, dev);
 const build = gulp.series(clean, dev);
 
 module.exports.start = gulp.series(build, serve);

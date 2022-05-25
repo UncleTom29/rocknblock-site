@@ -1,28 +1,29 @@
 {
-  "name": "gulp-template",
-  "version": "1.0.0",
+  "name": "gulp-app-template",
+  "version": "1.0.1",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp start",
-    "build": "gulp build",
+    "build": "gulp build --production",
     "lighthouse": "gulp build && gulp lighthouse",
     "test": "editorconfig-cli && stylelint ./src/styles/**/*.scss --syntax scss && eslint ./src/js",
     "stylelint-fix": "stylelint ./src/styles/**/*.scss --fix --syntax scss",
     "eslint-fix": "eslint ./src/js/** --fix"
   },
-  "keywords": [],
+  "keywords": ["template","gulp","web","layout"],
   "author": {
     "name": "Amary Filo",
-    "url": "https://github.com/amaryfilo",
-    "email": "amaryfilo@gmail.com"
+    "email": "amaryfilo@gmail.com",
+    "url": "https://amaryfilo.com"
   },
   "contributors": [
     {
       "name": "Amary Filo",
-      "email": "amaryfilo@gmail.com"
+      "email": "amaryfilo@gmail.com",
+      "url": "https://amaryfilo.com"
     }
-   ],
+  ],
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -71,7 +72,9 @@
     "stylelint-config-standard": "^19.0.0",
     "stylelint-config-standard-scss": "^1.1.0",
     "stylelint-scss": "^3.13.0",
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^5.2.1",
+    "gulp-if": "^3.0.0",
+    "yargs": "^17.5.1"
   },
   "dependencies": {
     "cash-dom": "^8.1.0",
