@@ -1648,11 +1648,19 @@ header {
   }
 
   .site__imageWrapper {
-    height: 115px;
+    height: 120px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 25px;
+
+    .site__image {
+      display: flex;
+      max-height: 120px;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .site__link {
