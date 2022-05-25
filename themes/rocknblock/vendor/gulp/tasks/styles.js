@@ -1,4 +1,6 @@
 const gulp = require("gulp");
+const argv = require('yargs').argv;
+const gulpif = require('gulp-if');
 const plumber = require("gulp-plumber");
 const sass = require("gulp-sass");
 const cleanCSS = require("gulp-clean-css");
@@ -8,7 +10,8 @@ const autoprefixer = require("gulp-autoprefixer");
 const gulpStylelint = require("gulp-stylelint");
 const rename = require("gulp-rename");
 
-module.exports = function styles() {
+module.exports = function styles(_dev) {
+
   return gulp
     .src("src/styles/*.scss")
     .pipe(plumber())
@@ -23,7 +26,7 @@ module.exports = function styles() {
         ],
       })
     )
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(!argv.production, sourcemaps.init()))
     .pipe(sass())
     .pipe(
       autoprefixer({
@@ -44,7 +47,7 @@ module.exports = function styles() {
         }
       )
     )
-    .pipe(sourcemaps.write())
+    .pipe(gulpif(!argv.production, sourcemaps.write()))
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("build/css"));
 };
