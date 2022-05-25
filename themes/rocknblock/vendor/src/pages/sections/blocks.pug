@@ -286,7 +286,7 @@ mixin bottom-slide
                     img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
 
 mixin bottom-slide-v2
-  - var slides = [{image: 'icon-site1',title: 'NFT Marketplace',link: '/marketplace',},{image: 'icon-site2',title: 'Farming',link: '/farming',},{image: 'icon-site3',title: '10k nft generator',link: '/10knft',},{image: 'icon-site4',title: 'Crowdsale',link: '/crowdsale',},{image: 'icon-site5',title: 'Vesting',link: '/vesting',},{image: 'icon-site6',title: 'Staking',link: '/staking',},{image: 'icon-site7',title: 'Bridge',link: '/bridge'}];
+  - var slides = [{image: 'farming/icon-site1',title: 'NFT Marketplace',link: '/marketplace',},{image: 'farming/icon-site2',title: 'Farming',link: '/farming',},{image: 'farming/icon-site3',title: '10k nft generator',link: '/10knft',},{image: 'farming/icon-site4',title: 'Crowdsale',link: '/crowdsale',},{image: 'farming/icon-site5',title: 'Vesting',link: '/vesting',},{image: 'farming/icon-site6',title: 'Staking',link: '/staking',},{image: 'farming/icon-site7',title: 'Bridge',link: '/bridge'},{image: 'dex/icon-site',title: 'Dex',link: '/dex'},{image: 'metaverse/icon-site',title: 'Metaverse',link: '/metaverse'},{image: 'gamefi/icon-site',title: 'Gamefi',link: '/gamefi'},{image: 'security-audit/icon-site',title: 'Security Audit',link: '/security-audit'}];
 
   .sliderWrapper.slider-v2
     .block-header
@@ -297,7 +297,7 @@ mixin bottom-slide-v2
           .swiper-slide.slide
               article.site
                 figure.site__imageWrapper
-                  +webpImg('lazy',`../../../img/farming/${slide.image}`,'png',slide.title, 'site__image')
+                  +webpImg('lazy',`../../../img/${slide.image}`,'png',slide.title, 'site__image')
                 a.site__link(href=`${slide.link}`)= `${slide.title}`
                   i.site__linkIcon
                     img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
