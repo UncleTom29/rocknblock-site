@@ -166,6 +166,70 @@ description = "Section links slider v2"
 				</article>
 			</div>
 			{% endif %}
+			{% if this.page.url != '/gamefi' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/gamefi/icon-site.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/gamefi/icon-site.png'| theme }}" alt="Gamefi" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/safemoon">Gamefi <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/dex' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/dex/icon-site.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/dex/icon-site.png'| theme }}" alt="Dex" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/dex">Dex <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/metaverse' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/metaverse/icon-site.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/metaverse/icon-site.png'| theme }}" alt="Metaverse" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/metaverse">Metaverse <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/security-audit' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/security-audit/icon-site.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/security-audit/icon-site.png'| theme }}" alt="Security Audit" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/security-audit">Security Audit <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
 		</div>
 		<div class="navigation"><img class="navIcon nav-prev" src="{{ 'assets/images/site/nft/toLeft.svg'| theme }}" alt="nav left" /><img class="navIcon nav-next" src="{{ 'assets/images/site/nft/toRight.svg'| theme }}" alt="nav right" /></div>
 	</div>
