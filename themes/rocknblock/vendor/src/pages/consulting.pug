@@ -1,0 +1,15 @@
+extends layouts/index
+
+include sections/blocks
+include sections/consulting
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-consulting
+		+hero
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer
