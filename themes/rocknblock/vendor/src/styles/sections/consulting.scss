@@ -62,6 +62,7 @@
       flex-direction: column;
       align-items: baseline;
       margin: 0;
+      margin-top: 50px;
 
       .container {
         position: relative;
@@ -157,6 +158,160 @@
         @include b(769) {
           z-index: -1;
           max-width: 350px;
+        }
+      }
+    }
+
+    .need {
+      margin-top: 250px;
+
+      @include b(769) {
+        margin-top: 150px;
+      }
+
+      .block-head {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          background-image: url('../img/consulting/need-plane-prop.png');
+          // background-image: url('../images/site/consulting/need-plane-prop.png');
+          background-repeat: no-repeat;
+          width: 185px;
+          height: 110px;
+          top: -100px;
+          left: 37%;
+
+          @include b(769) {
+            width: 100%;
+            height: 85px;
+            top: -80px;
+            left: 0;
+            background-size: contain;
+            background-position: center;
+          }
+        }
+      }
+
+      &-items {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        margin-top: 150px;
+
+        @include b(769) {
+          margin-top: 60px;
+        }
+      }
+
+      &-item {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(370px,1fr));
+        grid-template-areas: 'text img';
+        min-height: 800px;
+
+        &.revert {
+          grid-template-areas: 'img text';
+        }
+
+        @include b(1024) {
+          min-height: 600px;
+        }
+
+        @include b(769) {
+          grid-template-columns: 1fr;
+          min-height: auto;
+          max-width: 550px;
+          margin: 0 auto;
+
+          grid-template-areas: 'text' 'img' !important;
+        }
+
+        &-text {
+          grid-area: text;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          padding: 100px 50px;
+          background-color: #121212;
+          border-top: 4px solid #DC2C2C;
+          
+          @include b(1024) {
+            padding: 100px 30px;
+          }
+
+          @include b(769) {
+            padding: 40px 0px;
+          }
+
+          img,
+          .title,
+          .text {
+            margin-bottom: 40px;
+
+            @include b(1024) {
+              margin-bottom: 30px;
+            }
+          }
+
+          .title{
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: 800;
+
+            @include b(1024) {
+              font-size: 30px;
+            }
+
+            @include b(769) {
+              font-size: 40px;
+            }
+          }
+
+          .text {
+            font-size: 20px;
+            line-height: 1.5;
+            font-family: TTCommons, sans-serif;
+            font-weight: 300;
+            max-width: 430px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            @include b(1024) {
+              font-size: 16px;
+            }
+
+            @include b(769) {
+              font-size: 20px;
+            }
+          }
+        }
+
+        &-img {
+          grid-area: img;
+          background-image: url('../../img/consulting/need-bg.png');
+          // background-image: url('../images/site/consulting/need-bg.png');
+          background-position: 0 bottom;
+          background-repeat: no-repeat;
+          background-size: contain;
+
+          padding: 40px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background-color: #1C1C1C;
+
+          .img {
+            @include b(769) {
+              max-width: 330px;
+            }
+          }
         }
       }
     }
