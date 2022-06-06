@@ -197,7 +197,7 @@
       &-items {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 50px;
+        grid-gap: 100px;
         margin-top: 150px;
 
         @include b(769) {
@@ -210,9 +210,92 @@
         grid-template-columns: repeat(2, minmax(370px,1fr));
         grid-template-areas: 'text img';
         min-height: 800px;
+        position: relative;
 
         &.revert {
           grid-template-areas: 'img text';
+        }
+
+        &:nth-child(1) {
+          &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../img/consulting/tech-spec-prop.png');
+            // background-image: url('../images/site/consulting/need-plane-prop.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 180px;
+            height: 180px;
+            z-index: -1;
+            top: -90px;
+            right: -90px;
+  
+            @include b(769) {
+              display: none;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          &::before {
+            content: '';
+            position: absolute;
+            background-image: url('../img/consulting/white-paper-prop-1.png');
+            // background-image: url('../images/site/consulting/need-plane-prop.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 150px;
+            height: 150px;
+            z-index: -1;
+            top: -10px;
+            left: -30px;
+  
+            @include b(769) {
+              display: none;
+            }
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../img/consulting/white-paper-prop-2.png');
+            // background-image: url('../images/site/consulting/need-plane-prop.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 150px;
+            height: 150px;
+            z-index: -1;
+            bottom: -65px;
+            left: 35%;
+  
+            @include b(769) {
+              display: none;
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../img/consulting/light-paper-prop.png');
+            // background-image: url('../images/site/consulting/need-plane-prop.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 200px;
+            height: 200px;
+            z-index: 1;
+            top: 12%;
+            right: -20px;
+  
+            @include b(769) {
+              display: none;
+            }
+          }
+
+          .img {
+            z-index: 2;
+          }
         }
 
         @include b(1024) {
@@ -310,6 +393,66 @@
           .img {
             @include b(769) {
               max-width: 330px;
+            }
+          }
+        }
+      }
+    }
+
+    .idea {
+      .container {
+        .block-head {
+          background: radial-gradient(164.42% 242.86% at 57.77% -25.29%, #FF0505 0%, #CE0000 0.01%, #000000 28.65%, #262121 52.6%, #130D0D 73.44%, #FF0000 100%);
+          border-radius: 30px;
+          padding-top: 100px;
+          padding-bottom: 50px;
+          max-width: 100%;
+          position: relative;
+
+          @include b(769) {
+            padding-top: 60px;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../img/consulting/idea.png');
+            // background-image: url('../images/site/consulting/idea.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 100%;
+            height: 300px;
+            z-index: -1;
+            top: -150px;
+            right: -20px;
+  
+            @include b(769) {
+              display: none;
+            }
+          }
+
+          .title {
+            max-width: 850px;
+            font-size: 60px;
+            margin: 0;
+            margin-bottom: 30px;
+
+            @include b(769) {
+              font-size: 40px;
+              margin-bottom: 0px;
+            }
+          }
+
+          .button {
+            max-width: max-content;
+
+            @include b(769) {
+              margin-top: 30px;
+            }
+
+            img {
+              margin-left: 10px;
             }
           }
         }
