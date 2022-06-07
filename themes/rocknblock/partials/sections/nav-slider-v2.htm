@@ -230,6 +230,38 @@ description = "Section links slider v2"
 				</article>
 			</div>
 			{% endif %}
+			{% if this.page.url != '/consulting' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/consulting/icon-site.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/consulting/icon-site.png'| theme }}" alt="Consulting Services" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/consulting">Consulting Services <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/no-code' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/no-code/icon-site.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/no-code/icon-site.png'| theme }}" alt="Blockchain Solutions" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/no-code">Blockchain Solutions <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
 		</div>
 		<div class="navigation"><img class="navIcon nav-prev" src="{{ 'assets/images/site/nft/toLeft.svg'| theme }}" alt="nav left" /><img class="navIcon nav-next" src="{{ 'assets/images/site/nft/toRight.svg'| theme }}" alt="nav right" /></div>
 	</div>
