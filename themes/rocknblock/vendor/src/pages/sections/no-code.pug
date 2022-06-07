@@ -1,0 +1,74 @@
+include blocks
+
+mixin hero
+  section.hero
+    .container
+      .block-head
+        h1.title 
+          span.text-border No Code 
+          | Blockchain Solutions
+        p.text Create and Launch Smart Contract without coding, right from your browser.
+        a.button(href="#contact-us") Launch app
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+      +webpImg('lazy',`../../img/mo-code/hero`,'png','No Code Blockchain Solutions','img')
+
+mixin library
+  section.library
+    .container
+      .block-head
+        h1.title Smart contracts library:
+      .content
+        .library-item
+
+mixin network
+  section.network
+    .container
+      .block-head
+        h1.title Supported networks:
+      .content
+        .network-item
+
+mixin customise
+  section.customise
+    .container
+      .block-head
+        h1.title Customise pre-designed 
+          span smart contracts 
+          | templates and deploy your own smart contract in 
+          span 3 steps:
+      .content
+        //- img
+
+mixin feature
+  section.feature
+    .container
+      .block-head
+        h1.title Features
+      .content
+        .feature-item
+
+mixin partner
+  section.partner
+    .container
+      .block-head
+        h1.title Partners
+      .content
+        .partner-item
+
+mixin grant
+  section.grant
+    .container
+      .block-head
+        h1.title Grants
+      .content
+        .grant-item
+
+mixin create
+  section.create
+    .container
+      .block-head
+        h2.title Create smart contract 
+          span without coding
+          | , right from your browser
+        a.button(href="#contact-us") Learn more
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
