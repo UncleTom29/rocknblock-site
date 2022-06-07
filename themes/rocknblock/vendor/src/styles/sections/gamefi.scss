@@ -326,6 +326,8 @@
         }
 
         .content {
+          overflow: hidden;
+
           .navigation {
             text-align: center;
             border: 1px solid #dc2c2c;
