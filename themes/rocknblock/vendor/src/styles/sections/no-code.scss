@@ -64,15 +64,19 @@
       margin: 0;
       margin-top: 50px;
 
+      @include b(769) {
+        margin-top: 10px;
+      }
+
       .container {
         position: relative;
         display: grid;
-        grid-template-columns: minmax(320px, 450px) minmax(400px, 1fr);
-        grid-gap: 15px;
+        grid-template-columns: minmax(320px, 440px) minmax(400px, 1fr);
+        grid-gap: 0px;
 
         @include b(769) {
           display: flex;
-          flex-direction: column-reverse;
+          flex-direction: column;
           align-items: center;
         }
       }
@@ -82,35 +86,62 @@
         width: 100%;
         align-items: baseline;
         text-align: left;
+        justify-content: flex-start;
         margin: 0;
-        padding-top: 70px;
+        padding-top: 30px;
 
         @include b(1024) {
-          padding-top: 0px;
+          padding-top: 0;
         }
 
         @include b(769) {
           max-width: 100%;
           align-items: center;
           text-align: center;
-          padding: 0 15px;
+          padding: 0;
+          margin-bottom: 40px;
         }
 
         .title {
-          font-size: 50px;
-          line-height: 1;
+          font-size: 60px;
+          line-height: 1.1;
           text-transform: uppercase;
 
+          @include b(1024) {
+            margin-top: 0;
+          }
+
           @include b(900) {
-            font-size: 40px;
+            font-size: 45px;
           }
 
           @include b(769) {
-            font-size: 35px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
           }
 
           @include b(650) {
             font-size: 30px;
+          }
+
+          .text-border {
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #dc2c2c;
+            color: transparent;
+            font-size: 85px;
+
+            @include b(900) {
+              font-size: 64px;
+            }
+
+            @include b(769) {
+              font-size: 59px;
+              margin-bottom: 20px;
+            }
           }
         }
 
@@ -123,7 +154,7 @@
 
           @include b(900) {
             font-size: 20px;
-            max-width: 400px;
+            max-width: 320px;
           }
 
           @include b(769) {
@@ -133,7 +164,8 @@
           }
 
           @include b(650) {
-            font-size: 22px;
+            font-size: 18px;
+            font-weight: 300;
             margin: 0 auto;
             line-height: 1.2;
           }
