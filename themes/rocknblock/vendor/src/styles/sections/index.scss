@@ -1274,6 +1274,57 @@ header {
     margin-top: 20px;
   }
 
+  &-services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(30.15deg,#000 14.13%,#272525 79.31%);
+    border: 2px solid #dc2c2c;
+    border-radius: 20px;
+    padding: 25px 15px 35px 15px;
+    margin-top: 25px;
+
+    
+    .title {
+      margin: 0 auto;
+      text-transform: uppercase;
+      font-size: 20px;
+      margin-bottom: 25px;
+      font-weight: 600;
+      color: #dc2c2c;
+    }
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      grid-gap: 20px;
+      width: 100%;
+
+      @include b(550) {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-gap: 15px;
+      }
+
+      .link {
+        opacity: 0.5;
+        width: max-content;
+        margin: 0 auto;
+        font-size: 17px;
+        font-family: TTCommons, sans-serif;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+
   .social-links {
     display: flex;
     justify-content: center;
