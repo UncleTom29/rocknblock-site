@@ -213,10 +213,10 @@
     }
 
     .why-use {
-      background-image: url('../img/rust/bg.png');
+      // background-image: url('../img/rust/bg.png');
+      background-image: url('../images/site/rust/bg.png');
       background-position: center top;
       background-repeat: no-repeat;
-      // background-image: url('../images/site/rust/bg.png');
       position: relative;
       padding: 100px 0 50px 0;
       margin-top: 250px;
@@ -257,8 +257,8 @@
         &::before {
           content: '';
           position: absolute;
-          background-image: url('../img/rust/rust.png');
-          // background-image: url('../images/site/rust/rust.png');
+          // background-image: url('../img/rust/rust.png');
+          background-image: url('../images/site/rust/rust.png');
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center;
@@ -374,8 +374,8 @@
           &::after {
             content: '';
             position: absolute;
-            background-image: url('../img/rust/sure.png');
-            // background-image: url('../images/site/rust/sure.png');
+            // background-image: url('../img/rust/sure.png');
+            background-image: url('../images/site/rust/sure.png');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
@@ -389,7 +389,6 @@
             @include b(769) {
               height: 200px;
               top: -230px;
-              // display: none;
             }
           }
 
@@ -421,8 +420,8 @@
     }
 
     .development {
-      background-image: url('../img/rust/bg.png');
-      // background-image: url('../images/site/rust/bg.png');
+      // background-image: url('../img/rust/bg.png');
+      background-image: url('../images/site/rust/bg.png');
       background-position: center top;
       background-repeat: no-repeat;
       padding: 100px 0;
