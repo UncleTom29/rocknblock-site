@@ -17,10 +17,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'portfolio',
-            'description' => 'No description provided yet...',
+            'name'        => 'Портфолио',
+            'description' => 'RnB портфолио',
             'author'      => 'amaryfilo',
-            'icon'        => 'icon-leaf'
+            'icon'        => 'icon-database'
         ];
     }
 
@@ -51,10 +51,10 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
+        // return []; // Remove this line to activate
 
         return [
-            'Amaryfilo\Portfolio\Components\MyComponent' => 'myComponent',
+            'Amaryfilo\Portfolio\Components\Portfolio' => 'portfolio',
         ];
     }
 
@@ -83,13 +83,13 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
-        return []; // Remove this line to activate
+        // return []; // Remove this line to activate
 
         return [
             'portfolio' => [
-                'label'       => 'portfolio',
-                'url'         => Backend::url('amaryfilo/portfolio/mycontroller'),
-                'icon'        => 'icon-leaf',
+                'label'       => 'Portfolio',
+                'url'         => Backend::url('amaryfilo/portfolio/portfolio'),
+                'icon'        => 'icon-database',
                 'permissions' => ['amaryfilo.portfolio.*'],
                 'order'       => 500,
             ],

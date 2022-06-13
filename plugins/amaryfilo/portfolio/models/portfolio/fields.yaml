@@ -12,14 +12,15 @@ fields:
         label: Тип кейса
         type: dropdown
         options:
-            -
+            contracts: SMART CONTRACTS
+            webMobile: WEB/MOBILE DEVELOPMENT
         span: right
     title:
         label: Заголовок
         type: text
         span: left
         required: true
-    image_article:
+    icon:
         label: Иконка
         type: fileupload
         mode: image
@@ -27,6 +28,7 @@ fields:
         required: true
         imageHeight: 85
         imageWidth: 85
+        fileTypes: png,svg,jpeg
         thumbOptions:
             mode: crop
             offset:
@@ -39,7 +41,7 @@ fields:
     description:
         label: Описание
         comment: Описание самого кейса
-        type: text
+        type: richeditor
         span: left
     feature:
         label: Features
@@ -53,12 +55,29 @@ fields:
         type: taglist
         separator: comma
         span: right
-    # slug:
-    #     label: URL
-    #     comment: Ссылка по которой будет доступен кейс
-    #     preset:
-    #         field: title
-    #         type: slug
-    #     span: left
-    #     type: text
-    #     required: true
+    images:
+        label: Изображения
+        type: fileupload
+        mode: image
+        span: full
+        required: true
+        imageHeight: 535
+        imageWidth: 735
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 70
+            sharpen: 0
+            interlace: false
+            extension: auto
+    slug:
+        label: URL
+        hidden: true
+        comment: Ссылка по которой будет доступен кейс
+        preset:
+            field: title
+            type: slug
+        span: left
+        type: text

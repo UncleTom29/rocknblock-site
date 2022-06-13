@@ -7,8 +7,8 @@ class Portfolio extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'portfolio Component',
-            'description' => 'No description provided yet...'
+            'name'        => 'Portfolio',
+            'description' => ''
         ];
     }
 

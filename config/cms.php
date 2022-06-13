@@ -26,6 +26,18 @@ return [
 
     'edgeUpdates' => false,
 
+    'fileDefinitions' => [
+        'imageExtensions' => [
+            'svg',
+            'jpg',
+            'jpeg',
+            'bmp',
+            'png',
+            'webp',
+            'gif',
+        ]
+        ],
+
     /*
     |--------------------------------------------------------------------------
     | Back-end URI prefix

@@ -6,3 +6,13 @@ columns:
     id:
         label: ID
         searchable: true
+    title:
+        label: title
+        searchable: true
+    type:
+        label: Тип
+        searchable: true
+    is_active:
+        label: Active
+        type: switch
+        searchable: true
