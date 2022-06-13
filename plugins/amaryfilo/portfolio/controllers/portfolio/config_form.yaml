@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Portfolio
+
+# Model Form Field configuration
+form: $/amaryfilo/portfolio/models/portfolio/fields.yaml
+
+# Model Class name
+modelClass: Amaryfilo\Portfolio\Models\Portfolio
+
+# Default redirect location
+defaultRedirect: amaryfilo/portfolio/portfolio
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: amaryfilo/portfolio/portfolio/update/:id
+    redirectClose: amaryfilo/portfolio/portfolio
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: amaryfilo/portfolio/portfolio
+    redirectClose: amaryfilo/portfolio/portfolio
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
