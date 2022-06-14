@@ -36,6 +36,7 @@
 
                       {% for i, img in item.images %}
                       <picture class="case-1-{{ key+1 }}-img-{{ i+1 }} case-image">
+                        <source type="image/webp" srcset="{{ img.path | resize(735, false, { mode: 'crop', quality: '100', extension: 'webp' }) }}" />
                         <img loading="lazy" src="{{ img.path }}" alt="{{ img.title }}" />
                       </picture>
                       {% endfor %}
@@ -92,6 +93,7 @@
                     <div class="noscroll">
                       {% for i, img in item.images %}
                       <picture class="scroll__dev">
+                        <source type="image/webp" srcset="{{ img.path | resize(285, false, { mode: 'crop', quality: '100', extension: 'webp' }) }}" />
                         <img loading="lazy" src="{{ img.path }}" alt="{{ img.title }}" />
                       </picture>
                       {% endfor %}
