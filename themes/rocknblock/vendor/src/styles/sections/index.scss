@@ -2212,44 +2212,16 @@ header {
       }
     }
 
-    #tab-btn-case-1-1:checked ~ .scroll .content-case-1-1 {
-      display: flex;
+    @for $i from 1 through 50 {
+      #tab-btn-case-1-#{$i}:checked ~ .scroll .content-case-1-#{$i} {
+        display: flex;
+      }
     }
 
-    #tab-btn-case-1-2:checked ~ .scroll .content-case-1-2 {
-      display: flex;
-    }
-
-    #tab-btn-case-1-3:checked ~ .scroll .content-case-1-3 {
-      display: flex;
-    }
-
-    #tab-btn-case-1-4:checked ~ .scroll .content-case-1-4 {
-      display: flex;
-    }
-
-    #tab-btn-case-1-5:checked ~ .scroll .content-case-1-5 {
-      display: flex;
-    }
-
-    #tab-btn-case-1-6:checked ~ .scroll .content-case-1-6 {
-      display: flex;
-    }
-
-    #tab-btn-case-2-1:checked ~ .scroll .content-case-2-1 {
-      display: flex;
-    }
-
-    #tab-btn-case-2-2:checked ~ .scroll .content-case-2-2 {
-      display: flex;
-    }
-
-    #tab-btn-case-2-3:checked ~ .scroll .content-case-2-3 {
-      display: flex;
-    }
-
-    #tab-btn-case-2-4:checked ~ .scroll .content-case-2-4 {
-      display: flex;
+    @for $i from 1 through 50 {
+      #tab-btn-case-2-#{$i}:checked ~ .scroll .content-case-2-#{$i} {
+        display: flex;
+      }
     }
   }
 }
@@ -2484,60 +2456,14 @@ header {
       }
     }
 
-    #case-1-1-img-1:checked ~ .case-1-1-img-1 {
-      display: flex;
-    }
-
-    #case-1-1-img-2:checked ~ .case-1-1-img-2 {
-      display: flex;
-    }
-
-    #case-1-2-img-1:checked ~ .case-1-2-img-1 {
-      display: flex;
-    }
-
-    #case-1-2-img-2:checked ~ .case-1-2-img-2 {
-      display: flex;
-    }
-
-    #case-1-3-img-1:checked ~ .case-1-3-img-1 {
-      display: flex;
-    }
-
-    #case-1-3-img-2:checked ~ .case-1-3-img-2 {
-      display: flex;
-    }
-
-    #case-1-4-img-1:checked ~ .case-1-4-img-1 {
-      display: flex;
-    }
-
-    #case-1-4-img-2:checked ~ .case-1-4-img-2 {
-      display: flex;
-    }
-
-    #case-1-5-img-1:checked ~ .case-1-5-img-1 {
-      display: flex;
-    }
-
-    #case-1-5-img-2:checked ~ .case-1-5-img-2 {
-      display: flex;
-    }
-
-    #case-1-6-img-1:checked ~ .case-1-6-img-1 {
-      display: flex;
-    }
-
-    #case-1-6-img-2:checked ~ .case-1-6-img-2 {
-      display: flex;
-    }
-
-    #case-1-3-img-1:checked ~ .case-1-3-img-1 {
-      display: flex;
-    }
-
-    #case-1-3-img-2:checked ~ .case-1-3-img-2 {
-      display: flex;
+    @for $i from 1 through 50 {
+      #case-1-#{$i}-img-1:checked ~ .case-1-#{$i}-img-1 {
+        display: flex;
+      }
+  
+      #case-1-#{$i}-img-2:checked ~ .case-1-#{$i}-img-2 {
+        display: flex;
+      }
     }
   }
 
