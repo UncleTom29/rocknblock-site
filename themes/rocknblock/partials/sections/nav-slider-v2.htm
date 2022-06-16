@@ -262,6 +262,35 @@ description = "Section links slider v2"
 				</article>
 			</div>
 			{% endif %}
+			{% if this.page.url != '/rust' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/rust/icon-site.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/rust/icon-site.png'| theme }}" alt="Rust" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/rust">Rust <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/property-tokenization' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/tokenization/icon-site.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/tokenization/icon-site.png'| theme }}" alt="Property Tokenization" />
+						</picture>
+					</figure>
+					<span class="site__link" style="font-size: 14px;">Property Tokenization (soon)</span>
+				</article>
+			</div>
+			{% endif %}
 		</div>
 		<div class="navigation"><img class="navIcon nav-prev" src="{{ 'assets/images/site/nft/toLeft.svg'| theme }}" alt="nav left" /><img class="navIcon nav-next" src="{{ 'assets/images/site/nft/toRight.svg'| theme }}" alt="nav right" /></div>
 	</div>
