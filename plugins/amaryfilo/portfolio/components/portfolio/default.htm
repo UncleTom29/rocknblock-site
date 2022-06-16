@@ -79,7 +79,7 @@
           {% for key, item in portfolioWeb | reverse if item.is_active %}
           <input type="radio" name="tab-btn-case-2" id="tab-btn-case-2-{{ key+1 }}" {% if key+1==1 %} checked="checked" {% endif %} />
           <label class="content-item" for="tab-btn-case-2-{{ key+1 }}">
-            <img class="content-item__img" src="{{ 'assets/images/site/logo/logo-ducatus.svg'| theme }}" alt="ducatus logo" />
+            <img class="content-item__img" src="{{ item.icon.path }}" alt="{{ item.title }}" />
             <span class="content-item__name">{{ item.title }}</span>
           </label>
           {% endfor %}
