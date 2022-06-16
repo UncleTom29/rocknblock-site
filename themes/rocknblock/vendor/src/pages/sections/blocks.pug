@@ -310,11 +310,8 @@ mixin bottom-services
 
   section.rnb-service
     .container
-      .block-head
-        h2.title 
-          span Rock'n'Block <br/>
-          | Solutions and Services
-        p.text We implement a large number of complex projects that will help you grow your business.
+      .block-header
+        h2.primary-header Solutions and Services
       .content
         each service in services.length ? services : ['No values']
           a.rnb-service-item(href=`${service.link}`)
