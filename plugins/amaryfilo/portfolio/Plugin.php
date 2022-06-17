@@ -65,15 +65,22 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
+        // return []; // Remove this line to activate
 
         return [
-            'amaryfilo.portfolio.some_permission' => [
+            'amaryfilo.portfolio.access' => [
                 'tab' => 'portfolio',
-                'label' => 'Some permission',
-                'roles' => [UserRole::CODE_DEVELOPER, UserRole::CODE_PUBLISHER],
+                'label' => 'Create/Delete/Edit'
             ],
         ];
+
+        // return [
+        //     'amaryfilo.portfolio.some_permission' => [
+        //         'tab' => 'portfolio',
+        //         'label' => 'Some permission',
+        //         'roles' => [UserRole::CODE_DEVELOPER, UserRole::CODE_PUBLISHER],
+        //     ],
+        // ];
     }
 
     /**
