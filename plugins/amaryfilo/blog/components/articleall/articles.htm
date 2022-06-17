@@ -1,0 +1,14 @@
+{% if articles %}
+{% for article in articles %}
+{% if article.is_active %}
+<a class="blog-item" href="/blog/{{ article.slug }}">
+  <picture class="blog-item-img">
+    <source type="image/webp" srcset="{{ article.image_article.path|resize(240, 140, { mode: 'crop', quality: '80', extension: 'webp' }) }}" />
+    <img loading="lazy" src="{{ article.image_article.path|resize(240, 140, { mode: 'crop', quality: '80', extension: 'png' }) }}" alt="{{ article.title }}" />
+  </picture>
+  <h3 class="blog-item-title">{{ article.title }}</h3>
+  <p class="blog-item-anonce">{{ article.anonce }}</p>
+</a>
+{% endif %}
+{% endfor %}
+{% endif %}

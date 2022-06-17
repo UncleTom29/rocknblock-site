@@ -1,36 +1,18 @@
 {% set articles = __SELF__.ViewArticlesAll() %}
 {% set navs = __SELF__.ViewCategories() %}
+{% set navActiveId = -1 %}
 
 <div class="blog-list">
 	<div class="blog-nav">
 		<div class="blog-nav-ls">
-			<span class="blog-select-nav blog-nav-item active"
-																																																															data-filter="all">All
-				Topics</span>
+			<button class="blog-select-nav blog-nav-item {% if navActiveId == -1 %}active{% endif %}" data-request="{{ __SELF__ }}::onArticles">All Topics</button>
 			{% for nav in navs %}
-			<span class="blog-select-nav blog-nav-item"
-																																																															data-filter="{{ nav.title }}">{{
-				nav.title }}</span>
+			<button class="blog-select-nav blog-nav-item" data-request-data="id: {{nav.id}}" data-request="{{ __SELF__ }}::onArticles">{{ nav.title }}</button>
 			{% endfor %}
 		</div>
 	</div>
-	<div class="blog-items">
-		{% for article in articles %}
-		{% if article.is_active %}
-		<a class="blog-item"
-																																																														data-category="{{ article.article_category[0].title }}"
-																																																														href="/blog/{{ article.slug }}">
-			<picture class="blog-item-img">
-				<source type="image/webp"
-																																																																srcset="{{ article.image_article.path|resize(240, 140, { mode: 'crop', quality: '80', extension: 'webp' }) }}" />
-				<img loading="lazy"
-																																																																src="{{ article.image_article.path|resize(240, 140, { mode: 'crop', quality: '80', extension: 'png' }) }}"
-																																																																alt="{{ article.title }}" />
-			</picture>
-			<h3 class="blog-item-title">{{ article.title }}</h3>
-			<p class="blog-item-anonce">{{ article.anonce }}</p>
-		</a>
-		{% endif %}
-		{% endfor %}
+
+	<div class="blog-items" id="articles">
+		{% partial '@articles' articles=articles %}
 	</div>
 </div>

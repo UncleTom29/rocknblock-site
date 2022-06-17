@@ -123,9 +123,12 @@ class Feedback extends ComponentBase
             "data_fields" => json_encode($response)
         ];
 
-        $integration = DB::table('amaryfilo_integrations')->where('type', 'amocrm')->first();
+        $integration = DB::table('amaryfilo_integrations')->where('type', 'amocrm');
         
-        if($integration) $integration->update(['data_fields' => $arrParams['data_fields']]);
+        if($integration)
+        {
+            $integration->update(['data_fields' => $arrParams['data_fields']]);
+        }
         else DB::table('amaryfilo_integrations')->insert($arrParams);
 
         return $response['access_token'];

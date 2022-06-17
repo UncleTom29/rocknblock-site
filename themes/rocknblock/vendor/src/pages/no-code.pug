@@ -1,0 +1,22 @@
+extends layouts/index
+
+include sections/blocks
+include sections/no-code
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-no-code
+		+hero
+		+library
+		+network
+		+customise
+		+feature
+		+partner
+		+grant
+		+create
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer

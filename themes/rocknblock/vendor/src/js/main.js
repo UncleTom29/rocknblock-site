@@ -141,6 +141,17 @@ $(document).ready(() => {
     },
   });
 
+  new Swiper('.swiper-networks', {
+    slidesPerView: 'auto',
+    // loop: true,
+    // centeredSlides: true,
+    spaceBetween: 15,
+    navigation: {
+      nextEl: '.network-nav-next',
+      prevEl: '.network-nav-prev',
+    },
+  });
+
   new Swiper('.swiper-cases', {
     slidesPerView: 1,
     loop: true,

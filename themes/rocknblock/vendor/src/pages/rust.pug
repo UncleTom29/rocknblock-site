@@ -1,0 +1,21 @@
+extends layouts/index
+
+include sections/blocks
+include sections/rust
+
+block header
+	include common/header
+
+block content
+	main.pg.pg-rust
+		+hero
+		+why-use
+		+benefits
+		+sure
+		+development
+		+use
+		+choose
+		+contact-us('GET LIVE TECHNICAL DEMO')
+
+block footer
+	include common/footer

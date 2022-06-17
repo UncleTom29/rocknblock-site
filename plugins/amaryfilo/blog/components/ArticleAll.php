@@ -27,6 +27,18 @@ class ArticleAll extends ComponentBase
         return Article::orderBy('id', 'desc')->where('is_active', true)->get();
     }
 
+    public function onArticles() {
+        $id = post('id');
+        $atricles = $id ? Category::orderBy('id', 'desc')->where('show', true)->where('id', $id)->first()->articles_in()->get() : Article::orderBy('id', 'desc')->where('is_active', true)->get();
+
+        if (!$atricles) {
+            $this->controller->setStatusCode(404);
+            return $this->controller->run('404');
+        } $this->page['articles'] = $atricles;
+
+        return ['#articles' => $this->renderPartial('@articles')];
+    }
+
     // public function onChangeCategory()
     // {
     //     $cat_id = post('cat_id');

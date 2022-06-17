@@ -305,6 +305,22 @@ mixin bottom-slide-v2
         img.navIcon.nav-prev(src="../../img/nft/toLeft.svg" alt="nav left")
         img.navIcon.nav-next(src="../../img/nft/toRight.svg" alt="nav right")
 
+mixin bottom-services
+  - var services = [{image: 'farming/icon-site1',text: 'We help you launch your own NFT marketplace.',title: 'NFT Marketplace',link: '/marketplace',},{image: 'farming/icon-site2',title: 'Farming',link: '/farming',},{image: 'farming/icon-site3',text: 'Generate 10,000 randomly created NFTs based on traits like CryptoPunks.',title: '10k nft generator',link: '/10knft',},{image: 'farming/icon-site4',text: 'We Help You Raise Funds For Your Venture.', title: 'Crowdsale',link: '/crowdsale',},{image: 'farming/icon-site5',title: 'Vesting',link: '/vesting',},{image: 'farming/icon-site6',title: 'Staking',link: '/staking',},{image: 'farming/icon-site7',title: 'Bridge',link: '/bridge'},{image: 'dex/icon-site',title: 'Dex',link: '/dex'},{image: 'metaverse/icon-site',title: 'Metaverse',link: '/metaverse'},{image: 'gamefi/icon-site',title: 'Gamefi',link: '/gamefi'},{image: 'security-audit/icon-site',title: 'Security Audit',link: '/security-audit'}];
+
+  section.rnb-service
+    .container
+      .block-header
+        h2.primary-header Solutions and Services
+      .content
+        each service in services.length ? services : ['No values']
+          a.rnb-service-item(href=`${service.link}`)
+            +webpImg('lazy',`../../../img/${service.image}`,'png',service.title, 'rnb-service-item-img')
+            .info-block
+              h3.title= service.title
+              if service.text
+                p.text= service.text
+
 mixin contact-us(title)
   #contact-us.contact-us.container
     .background-img

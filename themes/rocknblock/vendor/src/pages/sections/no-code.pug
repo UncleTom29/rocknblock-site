@@ -1,0 +1,221 @@
+include blocks
+
+mixin hero
+  section.hero
+    .container
+      .block-head
+        h1.title 
+          span.text-border No Code 
+          | Blockchain Solutions
+        p.text Create and Launch Smart Contract without coding, right from your browser.
+        a.button(href="#contact-us") Launch app
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+      +webpImg('lazy',`../../img/no-code/hero`,'png','No Code Blockchain Solutions','img')
+
+mixin library
+  section.library
+    .container
+      .block-head
+        h1.title Smart contracts library:
+      .content
+        .library-item
+          .img
+            img(loading='lazy' src=`../../img/no-code/library-token.svg` alt="Token contract")
+          h3.title Token contract
+        .library-item
+          .img
+            img(loading='lazy' src=`../../img/no-code/library-crowdsale.svg` alt="Crowdsale Contract")
+          h3.title Crowdsale Contract
+        .library-item
+          .img
+            img(loading='lazy' src=`../../img/no-code/library-airdrop.svg` alt="Airdrop Contract")
+          h3.title Airdrop Contract
+        .library-item
+          .img
+            img(loading='lazy' src=`../../img/no-code/library-protactor.svg` alt="Token Protector")
+          h3.title Token Protector
+        .library-item
+          .img
+            img(loading='lazy' src=`../../img/no-code/library-lost-key.svg` alt="Lost Key Contract")
+          h3.title Lost Key Contract
+        .library-item
+          .img
+            img(loading='lazy' src=`../../img/no-code/library-deferrer-payment.svg` alt="Deferred Payment")
+          h3.title Deferred Payment 
+
+mixin network
+  section.network
+    .container
+      .block-head
+        h1.title Supported networks:
+      .content
+        .swiper.swiper-networks
+          .navigation
+            img.network-nav-prev(src="../../img/gamefi/arrow-left.svg" alt="nav left")
+            img.network-nav-next(src="../../img/gamefi/arrow-right.svg" alt="nav right")
+          .swiper-wrapper
+            .swiper-slide.slide
+              .network-item.large
+                .top
+                  h3.title Ethereum 
+                  p.text Create and Deploy predesigned smart contracts template to Ethereum Mainnet and Testnet with a few clicks. You can customise and define the parameters, choose contract functions and get 100% ownership of your contract.
+                  a.button(href="#contact-us") Discover solutions
+                    img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+                .bottom
+                  +webpImg('lazy',`../../img/no-code/network-logo-ethereum`,'png','Ethereum','img')
+                  span.bottom-title Contracts:
+                  .bottom-item
+                    img(loading='lazy' src=`../../img/no-code/network-contract-crowdsale.svg` alt="Crowdsale")
+                    span.item-title Crowdsale
+                  .bottom-item
+                    img(loading='lazy' src=`../../img/no-code/network-contract-airdrop.svg` alt="Aidrop")
+                    span.item-title Aidrop
+                  .bottom-item
+                    img(loading='lazy' src=`../../img/no-code/network-contract-lostkey.svg` alt="Lost key")
+                    span.item-title Lost key
+                  .bottom-item
+                    img(loading='lazy' src=`../../img/no-code/network-contract-defferent-payment.svg` alt="Deffered Payment")
+                    span.item-title Deffered Payment
+                  .bottom-item
+                    img(loading='lazy' src=`../../img/no-code/network-contract-investment-pool.svg` alt="Investment pool")
+                    span.item-title Investment pool
+            .swiper-slide.slide
+              .network-item.short
+                .top
+                  +webpImg('lazy',`../../img/no-code/network-logo-solana`,'png','Solana','img')
+                  span.title Solana
+                  p.text Create and Manage Solana SPL tokens with MyWish no code solutions
+                  a.button(href="#contact-us") Discover solutions
+                    img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+              .network-item.short
+                .top
+                  +webpImg('lazy',`../../img/no-code/network-logo-moonriver`,'png','Moonriver','img')
+                  span.title Moonriver
+                  p.text Create and Manage Moonriver based ERC20 tokens with MyWish no code solutions
+                  a.button(href="#contact-us") Discover solutions
+                    img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+            .swiper-slide.slide
+              .network-item.short
+                .top
+                  +webpImg('lazy',`../../img/no-code/network-logo-tron`,'png','Tron','img')
+                  span.title Tron
+                  p.text Create, Manage, and Distribute TRC20 Polygon based tokens with MyWish no code solutions
+                  a.button(href="#contact-us") Discover solutions
+                    img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+              .network-item.short
+                .top
+                  +webpImg('lazy',`../../img/no-code/network-logo-xdc`,'png','XDC','img')
+                  span.title XDC
+                  p.text Create and Manage XDC based XRC20 tokens with MyWish no code solutions
+                  a.button(href="#contact-us") Discover solutions
+                    img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+            .swiper-slide.slide
+              .network-item.large.left(style="--network-large-color: #EFD12B;")
+                .top
+                  h3.title BNB Smart Chain
+                  p.text Create and Deploy predesigned smart contracts template to BNB Smart Chain Mainnet and Testnet with a few clicks. You can customise and define the parameters, choose contract functions and get 100% ownership of your contract. 
+                  a.button(href="#contact-us") Discover solutions
+                    img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')
+                .bottom 
+                  +webpImg('lazy',`../../img/no-code/network-logo-bnb`,'png','Binance','img')
+
+mixin customise
+  section.customise
+    .container
+      .block-head
+        h1.title Customise pre-designed 
+          span smart contracts 
+          | templates and deploy your own smart contract in 
+          span 3 steps:
+      .content
+        img(loading='lazy' src=`../../img/no-code/customise.svg` alt="Customise pre-designed smart contracts")
+
+mixin feature
+  section.feature
+    .container
+      .block-head
+        h1.title Features
+      .content
+        .feature-item
+          img(loading='lazy' src='../../img/no-code/feature-contract.svg' alt='Smart Contracts Library')
+          h3.title Smart Contracts Library
+        .feature-item
+          img(loading='lazy' src='../../img/no-code/feature-networks.svg' alt='11 Supported networks')
+          h3.title 11 Supported networks
+        .feature-item
+          img(loading='lazy' src='../../img/no-code/feature-pre-audit.svg' alt='Pre-audited Smart Contracts')
+          h3.title Pre-audited Smart Contracts
+        .feature-item
+          img(loading='lazy' src='../../img/no-code/feature-automatic-deployment.svg' alt='Automatic Deployment')
+          h3.title Automatic Deployment
+        .feature-item
+          img(loading='lazy' src='../../img/no-code/feature-ownership.svg' alt='100% ownership to the user')
+          h3.title 100% ownership to the user
+        .feature-item
+          img(loading='lazy' src='../../img/no-code/feature-service.svg' alt='Service Extension: Verification, Branded report')
+          h3.title Service Extension: Verification, Branded report
+
+mixin partner
+  section.partner
+    .container
+      .block-head
+        h1.title Partners
+      .content
+        .partner-item
+          img(loading='lazy' src='../../img/no-code/partner-mywish.svg' alt='mywish logo')
+          span.title MyWish
+        .partner-item
+          img(loading='lazy' src='../../img/no-code/partner-polygon.svg' alt='polygon logo')
+          span.title Polygon
+        .partner-item
+          img(loading='lazy' src='../../img/no-code/partner-neo.svg' alt='neo logo')
+          span.title Neo
+        .partner-item
+          img(loading='lazy' src='../../img/no-code/partner-moonbeam.svg' alt='moonbeam logo')
+          span.title Moonbeam
+        .partner-item
+          img(loading='lazy' src='../../img/no-code/partner-berry.svg' alt='berry logo')
+          span.title Berry
+        .partner-item
+          img(loading='lazy' src='../../img/no-code/partner-binance.svg' alt='Binance logo')
+          span.title Binance
+        .partner-item
+          img(loading='lazy' src='../../img/no-code/partner-rubic.svg' alt='Rubic logo')
+          span.title Rubic
+        .partner-item
+          img(loading='lazy' src='../../img/no-code/partner-best-rate.svg' alt='Best Rate logo')
+        .partner-item
+          img(loading='lazy' src='../../img/no-code/partner-bancor.svg' alt='Bancor logo')
+          span.title Bancor
+        .partner-item
+          img(loading='lazy' src='../../img/no-code/partner-waves.svg' alt='Waves logo')
+          span.title Waves
+        .partner-item
+          img(loading='lazy' src='../../img/no-code/partner-rsk.svg' alt='RSK logo')
+          span.title RSK
+        .partner-item
+          img(loading='lazy' src='../../img/no-code/partner-algebra.svg' alt='Algebra logo')
+          span.title Algebra
+
+mixin grant
+  section.grant
+    .container
+      .block-head
+        h1.title Grants
+      .content
+        img(loading='lazy' src='../../img/no-code/binance.svg' alt='binance smart chain')
+        img(loading='lazy' src='../../img/no-code/neo.svg' alt='neo')
+        img(loading='lazy' src='../../img/no-code/polygon.svg' alt='polygon')
+        img(loading='lazy' src='../../img/no-code/certic.svg' alt='certic')
+        img(loading='lazy' src='../../img/no-code/tron.svg' alt='tron')
+        img(loading='lazy' src='../../img/no-code/waves.svg' alt='waves')
+
+mixin create
+  section.create
+    .container
+      .block-head
+        h2.title Create smart contract 
+          span without coding
+          | , right from your browser
+        a.button(href="#contact-us") Learn more
+          img(loading='lazy' src='../../img/icons/icon-arrow-right-mask.svg' alt='arrow right')

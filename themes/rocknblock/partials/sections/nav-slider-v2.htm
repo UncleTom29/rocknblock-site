@@ -2,7 +2,7 @@ description = "Section links slider v2"
 ==
 <div class="sliderWrapper slider-v2">
 	<div class="block-header">
-		<h2 class="primary-header">Popular services</h2>
+		<h2 class="primary-header">Popular Services</h2>
 	</div>
 	<div class="swiper swiper-slider">
 		<div class="swiper-wrapper">
@@ -227,6 +227,67 @@ description = "Section links slider v2"
 							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
 						</i>
 					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/consulting' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/consulting/icon-site.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/consulting/icon-site.png'| theme }}" alt="Consulting Services" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/consulting">Consulting Services <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/token-generator' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/no-code/icon-site.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/no-code/icon-site.png'| theme }}" alt="Blockchain Solutions" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/token-generator">Blockchain Solutions <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/rust' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/rust/icon-site.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/rust/icon-site.png'| theme }}" alt="Rust" />
+						</picture>
+					</figure>
+					<a class="site__link" href="/rust">Rust <i class="site__linkIcon">
+							<img loading="lazy" src="{{ 'assets/images/site/icons/icon-arrow-right-mask.svg'| theme }}" alt="arrow right" />
+						</i>
+					</a>
+				</article>
+			</div>
+			{% endif %}
+			{% if this.page.url != '/property-tokenization' %}
+			<div class="swiper-slide slide">
+				<article class="site">
+					<figure class="site__imageWrapper">
+						<picture class="site__image">
+							<source type="image/webp" srcset="{{ 'assets/images/site/tokenization/icon-site.webp'| theme }}" />
+							<img loading="lazy" src="{{ 'assets/images/site/tokenization/icon-site.png'| theme }}" alt="Property Tokenization" />
+						</picture>
+					</figure>
+					<span class="site__link" style="font-size: 14px;">Property Tokenization (soon)</span>
 				</article>
 			</div>
 			{% endif %}
